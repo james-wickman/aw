@@ -1,15 +1,6 @@
 Rails.application.routes.draw do
-  get 'videos/index'
 
-  get 'videos/new'
-
-  get 'videos/create'
-
-  get 'videos/edit'
-
-  get 'videos/update'
-
-  get 'videos/destroy'
+  resources :videos
 
   get 'content/works'
 

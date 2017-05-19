@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Aw</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Audio Withdrawal</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,8 +10,118 @@
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+
+	<div id="wrapper">
+        <div class="overlay"></div>
+        
+        <!-- Sidebar -->
+        <nav class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <ul class='company_name' style='height:80px'>
+                	<%= image_tag("aw_logo.png", :style => "height: 50px; float: right; margin-top: 15px; margin-right: 18px;") %>
+                </ul>
+                <% if current_page?(root_path) %>
+                    <li>
+                        <a class="scroll_button home_button">Home<i class='sub_icon glyphicon glyphicon-home'></i></a>
+                    </li>
+                    <li>
+                        <a class="scroll_button intro_button">Intro<i class='sub_icon glyphicon glyphicon-shopping-cart'></i></a>
+                    </li>
+                    <li>
+                        <a class="scroll_button featured_works_button">Featured<i class='sub_icon glyphicon glyphicon-globe'></i></a>
+                    </li>
+                    <li>
+                        <a class="scroll_button works_button">Works<i class='sub_icon glyphicon glyphicon-plus-sign'></i></a>
+                    </li>
+                    <li>
+                        <a class="scroll_button contact_us_button">Contact Us<i class='sub_icon glyphicon glyphicon-phone-alt'></i></a>
+                    </li>
+                    <ul style="height: 150px;">
+                    	
+                    </ul>
+                    <li>
+                        <a class="scroll_button social_media_button">Social Media<i class='sub_icon glyphicon glyphicon-phone-alt'></i> <br>facebook</a>
+                    </li>
+                <% else %>
+                    <li>
+                        <%= link_to raw(" Home <i class='glyphicon glyphicon-home' style='float: right; margin-top: 11px; margin-right: 15px;'></i>"), root_path %>
+                    </li>
+                    <li>
+                        <%= link_to raw(" Works <i class='glyphicon glyphicon-plus-sign' style='float: right; margin-top: 11px; margin-right: 15px;'></i>"), content_works_path %>
+                    </li>
+                    <li>
+                        <%= link_to raw(" Contact Us <i class='glyphicon glyphicon-phone-alt' style='float: right; margin-top: 11px; margin-right: 15px;'></i>"), content_contact_us_path %>
+                    </li>
+                <% end %>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+          
+        </div>
+        <!-- /#page-content-wrapper
+
+    </div>
+    /#wrapper -->
+    <%= yield :javascript %>
+    <% if flash[:notice] || flash[:alert] %>
+	    <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+	  <% end %>
     <%= yield %>
+        <footer class="page-footer blue center-on-small-only">
+
+        <!--Footer Links-->
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <!--First column-->
+                <div class="col-md-5">
+                    <h5 class="title">Footer Content</h5>
+                    <p>Here you can use rows and columns here to organize your footer content.</p>
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-md-2">
+                    <h5 class="title">Links</h5>
+                    <ul>
+                        <li><%= link_to "Works ", content_works_path, method: :get, class: 'white' %></li>
+                        <li><%= link_to "Contact Us ", content_contact_us_path, method: :get, class: 'white' %></li>
+                        <% if !current_admin %>
+                            <li><%= link_to "Admin", new_admin_session_path, method: :get, class: 'white' %></li>
+                        <% else %>
+                            <li><%= link_to "Admin", videos_path, method: :get, class: 'white' %></li>
+                        <% end %>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-11">
+                    © 2017 Copyright
+
+                </div>
+                
+            </div>
+        <!--/.Footer Links-->
+        <!--/.Copyright-->
+
+        </footer>
+        
+    </div>
+
+
+    
   </body>
 </html>

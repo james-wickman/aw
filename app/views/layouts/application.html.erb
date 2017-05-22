@@ -19,7 +19,7 @@
         <nav class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <ul class='company_name' style='height:80px'>
-                	<%= image_tag("aw_logo.png", :style => "height: 50px; float: right; margin-top: 15px; margin-right: 18px;") %>
+                    <%= link_to image_tag('aw_logo.png', :style => "height: 50px; float: right; margin-top: 15px; margin-right: 18px;"), root_path %>
                 </ul>
                 <% if current_page?(root_path) %>
                     <li>
@@ -101,6 +101,8 @@
                         <% else %>
                             <li><%= link_to "Admin", videos_path, method: :get, class: 'white' %></li>
                         <% end %>
+                        <li><%= link_to raw(" login"), new_admin_session_path %></li>
+                        <li><%= link_to raw(" log out "), destroy_admin_session_path, method: :delete %></li>
                     </ul>
                 </div>
                 <!--/.Second column-->

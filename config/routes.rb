@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+  post 'content/send_email'
+
   devise_for :admins, controllers: {
         sessions: 'admins/sessions'
       }

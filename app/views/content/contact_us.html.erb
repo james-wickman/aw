@@ -1,2 +1,94 @@
-<h1>Content#contact_us</h1>
-<p>Find me in app/views/content/contact_us.html.erb</p>
+
+<div class="container" style="background-color: white; height: 600px;">
+	<div class="row basic_border green">
+		<div class="col-md-12 col-sm-12 center white_text">
+			<h5>Any questions please reach out</h5>
+		</div>
+	</div>
+	<div class="row shading email_info_container">
+		<div class="col-md-1 col-sm-1">
+		</div>
+		<div class="col-md-5 col-sm-11">
+			<h5 >Contact Us</h5>
+			<button class="info_button products_link">info@newpointetools.com</button><br>
+			<p >PO Box  I will get a PO Box so I do not use my home address. </p>
+		</div>
+		<div class="col-md-6 col-sm-11">
+			<p >Feedback</p>
+			<p >Testimonials</p>
+		</div>
+	</div>
+	<div class="row shading email_container" style="margin-top: 10px; margin-left: 50px;">
+
+		<%= form_tag'/content/send_email', remote: true do |f| %>
+			<div class="col-md-11 col-sm-11">
+				<div class="what_depo"></div>
+			</div>
+			<div class="col-md-1 col-sm-1">
+				<div class="close_contact_user center">X</div>
+			</div>
+			<%= hidden_field_tag :send_to_email, nil, class:"send_to_email" %><br />
+			<%= text_area_tag :first_name, nil, size: "20x1", class: "customer_name", placeholder: "First Name" %>
+			<%= text_area_tag :last_name, nil, size: "20x1", class: "customer_name", placeholder: "Last Name" %><br>
+			<%= text_area_tag :your_email, nil, size: "45x1", class: "customer_email", placeholder: "Your Email" %><br>
+			
+			<%= text_area_tag :message, nil, size: "100x8", class: "customer_input", placeholder: "This will only send too me right now" %><hr>
+			<%= submit_tag "Send", class: "submit_email" %>
+		<% end %>
+	</div>
+</div>
+
+<script>
+	$(".info_button").on('click', function() {
+		console.log("info");
+		$(".email_container").removeClass('hidden');
+		$(".email_info_container").removeClass('shading');
+		$(".email_info_container").addClass('basic_border');
+		$(".send_to_email").val("info@newpointetools.com");
+		$(".what_depo").text("More Information");
+	});
+	$(".sales_button").on('click', function() {
+		console.log('sales');
+		$(".email_container").removeClass('hidden');
+		$(".email_info_container").removeClass('shading');
+		$(".email_info_container").addClass('basic_border');
+		$(".send_to_email").val("sales@newpointetools.com");
+		$(".what_depo").text("Sales Information");
+	});
+	$(".support_button").on("click", function(){
+		console.log('support');
+		$(".email_container").removeClass('hidden');
+		$(".email_info_container").removeClass('shading');
+		$(".email_info_container").addClass('basic_border');
+		$(".send_to_email").val("support@newpointetools.com");
+		$(".what_depo").text("More Support");
+	});
+	$(".submit_email").on("click", function() {
+		var name = $('.customer_name').val();
+		var email = $('.customer_email').val();
+		var input = $('.customer_input').val();
+		console.log(name);
+		console.log(email);
+		console.log(input);
+	})
+	$(".close_contact_user").on("click", function() {
+		console.log('close0');
+		$(".email_container").addClass('hidden');
+		$(".customer_email").val('');
+		$(".customer_name").val('');
+		$(".customer_input").val('');
+	})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+

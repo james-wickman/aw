@@ -1,8 +1,7 @@
 <div class="container-fluid" style="padding: 0px; width: 100%;">
 	<div class="row home_section">
 		<div class="col-md-12 col-xs-12">
-			<span style="float: right;"><%= link_to raw(" login <i class='glyphicon glyphicon-home' style='float: right; margin-top: 11px; margin-right: 15px;'></i>"), new_admin_session_path %></span>
-			<span style="float: right;"><%= link_to raw(" log out <i class='glyphicon glyphicon-home' style='float: right; margin-top: 11px; margin-right: 15px;'></i>"), destroy_admin_session_path, method: :delete %></span>
+			
 			<%= image_tag "banner.jpg", :class => "home_main_pic" %>
 		</div>
 	</div>
@@ -20,13 +19,13 @@
 		<h4>For Booking, hiring, or any other inquisitions, visit our contact page!</h4>
 
 		<div class="col-md-3 col-xs-6">
-			<%= button_to "Music", '//www.audiowithdrawal.bandcamp.com', @external_url %>
+			<%= button_to "Sound Store", '//www.audiowithdrawal.bandcamp.com', @external_url %>
 		</div>
 		<div class="col-md-3 col-xs-6">
-			<p>Sound Store</p>
+			<%= button_to "You Tube", '//www.youtube.com/channel/UCKH1iz7ic0OVXmktxeUL3AA', @external_url %>
 		</div>
 		<div class="col-md-3 col-xs-6">
-			<%= button_to "Featured Artist", content_featured_works_path, method: :get %>
+			<%= button_to "Music", content_featured_works_path, method: :get %>
 		</div>
 		<div class="col-md-3 col-xs-6">
 			<%= button_to "Contact Us", content_contact_us_path, method: :get %>
@@ -35,7 +34,7 @@
 	<div class="row center featured_works_section" style="height:100%; background-color: lightgrey;">
 
 		<div class="col-md-12 col-xs-12" style="height: 50px;">
-			Featured Works Block
+			Scoring Samples
 		</div>
 		<div class="col-md-6 col-xs-12" id="top_left">
 			<iframe width='540' height='250' src='https://www.youtube.com/embed/XGSy3_Czz8k'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
@@ -43,10 +42,13 @@
 		<div class="col-md-6 col-xs-12" id="top_right">
 			<iframe width='540' height='250' src='https://www.youtube.com/embed/XGSy3_Czz8k'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
 		</div>
-		<div class="col-md-6 col-xs-12" id="mid_left" style="margin-top: 100px;">
+		<div class="col-md-12 col-xs-12" style="height: 50px;">
+			Featured Works
+		</div>
+		<div class="col-md-6 col-xs-12" id="mid_left">
 			<iframe width='540' height='250' src='https://www.youtube.com/embed/XGSy3_Czz8k'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
 		</div>
-		<div class="col-md-6 col-xs-12" id="mid_right" style="margin-top: 100px;">
+		<div class="col-md-6 col-xs-12" id="mid_right">
 			<iframe width='540' height='250' src='https://www.youtube.com/embed/XGSy3_Czz8k'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
 		</div>
 	</div>
@@ -58,9 +60,7 @@
 		<div class="col-md-6 col-xs-6">
 			Email
 		</div>
-	</div>
-	<div class="row center" style="height:50px; background-color: lightgrey;">
-	<%= link_to raw(" Contact Us <i class='glyphicon glyphicon-phone-alt push_right'></i>"), {controller: "content", action: "contact_us"} %>
+		<%= link_to raw(" Contact Us <i class='glyphicon glyphicon-phone-alt push_right'></i>"), {controller: "content", action: "contact_us"} %>
 	</div>
 	<div class="row center social_media_section" style="height:250px; background-color: white;">
 

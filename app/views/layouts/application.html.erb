@@ -26,13 +26,10 @@
                         <a class="scroll_button home_button">Home<i class='sub_icon glyphicon glyphicon-home'></i></a>
                     </li>
                     <li>
-                        <a class="scroll_button intro_button">Intro<i class='sub_icon glyphicon glyphicon-shopping-cart'></i></a>
+                        <a class="scroll_button intro_button">Intro<i class='sub_icon glyphicon glyphicon-user'></i></a>
                     </li>
                     <li>
-                        <a class="scroll_button featured_works_button">Featured<i class='sub_icon glyphicon glyphicon-globe'></i></a>
-                    </li>
-                    <li>
-                        <a class="scroll_button works_button">Works<i class='sub_icon glyphicon glyphicon-plus-sign'></i></a>
+                        <a class="scroll_button featured_works_button">Featured<i class='sub_icon glyphicon glyphicon-cd'></i></a>
                     </li>
                     <li>
                         <a class="scroll_button contact_us_button">Contact Us<i class='sub_icon glyphicon glyphicon-phone-alt'></i></a>
@@ -81,17 +78,17 @@
             <div class="container-fluid" style="padding: 0px; width: 100%;">
         <!--Footer Links-->
             <div class="row">
-                <div class="col-md-1">
+                <div class="col-md-1 col-xs-1">
                 </div>
                 <!--First column-->
-                <div class="col-md-5">
+                <div class="col-md-5 col-xs-5">
                     <h5 class="title">Footer Content</h5>
-                    <p>Here you can use rows and columns here to organize your footer content.</p>
+                    <p>info here</p>
                 </div>
                 <!--/.First column-->
 
                 <!--Second column-->
-                <div class="col-md-2">
+                <div class="col-md-2 col-xs-2">
                     <h5 class="title">Links</h5>
                     <ul>
                         <li><%= link_to "Works ", content_works_path, method: :get, class: 'white' %></li>
@@ -101,8 +98,8 @@
                         <% else %>
                             <li><%= link_to "Admin", videos_path, method: :get, class: 'white' %></li>
                         <% end %>
-                        <li><%= link_to raw(" login"), new_admin_session_path %></li>
-                        <li><%= link_to raw(" log out "), destroy_admin_session_path, method: :delete %></li>
+                        <!-- <li><%= link_to raw(" login"), new_admin_session_path %></li>
+                        <li><%= link_to raw(" log out "), destroy_admin_session_path, method: :delete %></li> -->
                     </ul>
                 </div>
                 <!--/.Second column-->

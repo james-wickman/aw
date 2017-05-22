@@ -3,52 +3,54 @@
 		<div class="col-md-12 col-xs-12">
 			<span style="float: right;"><%= link_to raw(" login <i class='glyphicon glyphicon-home' style='float: right; margin-top: 11px; margin-right: 15px;'></i>"), new_admin_session_path %></span>
 			<span style="float: right;"><%= link_to raw(" log out <i class='glyphicon glyphicon-home' style='float: right; margin-top: 11px; margin-right: 15px;'></i>"), destroy_admin_session_path, method: :delete %></span>
-			<%= image_tag "aw_business_card.jpg", :class => "home_main_pic" %>
+			<%= image_tag "banner.jpg", :class => "home_main_pic" %>
 		</div>
 	</div>
 	<div class="arrow animated bounce">
 	  <img width="40" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyDQoJbDE4OS45OTktMTkwYzIwLjE3OC0yMC4xNzgsNTMuMTY0LTE5LjkxMyw3My42NzIsMC41OTVsMCwwYzIwLjUwOCwyMC41MDksMjAuNzcyLDUzLjQ5MiwwLjU5NSw3My42NzFMMjkzLjc1MSw0NTUuODY4eiIvPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIyMC4yNDksNDU1Ljg2OGMyMC4xOCwyMC4xNzksNTMuMTY0LDE5LjkxMyw3My42NzItMC41OTVsMCwwYzIwLjUwOS0yMC41MDgsMjAuNzc0LTUzLjQ5MywwLjU5Ni03My42NzINCglsLTE5MC0xOTBjLTIwLjE3OC0yMC4xNzgtNTMuMTY0LTE5LjkxMy03My42NzEsMC41OTVsMCwwYy0yMC41MDgsMjAuNTA5LTIwLjc3Miw1My40OTItMC41OTUsNzMuNjcxTDIyMC4yNDksNDU1Ljg2OHoiLz4NCjwvc3ZnPg0K" />
 	</div>
-	<div class="row center" style="height:20px; background-color: white;">
-	</div>
-	<div class="row center intro_section" style="height:400px; background-color: white;">
+	<div class="row center intro_section" style="height:500px; background-color: white;">
+		<h4>Welcome to Audio Withdrawal!</h4>
 
-		<div class="col-md-4 col-xs-6">
-			intro
+		<p class='center'>At AW productions, we make music and audio for any need you may have.</p><p class='center'> Our specialties include:</p><p class='center'>Video Game/Film Scoring</p><p class='center'>Sound Design</p><p class='center'>Audio Engineering</p><p class='center'>Voiceovers</p>
+		<p class='center'>Need some original and interesting sounds? We create sound packs, which can be purchased and used</p><p class='center'> for visual media or whatever else.</p>
+		<p class='center'>Looking for some talent to book at your event? We feature artists from the local Utah scene, and have a</p><p class='center'> page dedicated to those wonderful creators.</p>
+		<p class='center'>Need some powerful music to match your visual artistry? We offer scoring and compositional services at</p><p class='center'> very fair rates.</p>
+
+		<h4>For Booking, hiring, or any other inquisitions, visit our contact page!</h4>
+
+		<div class="col-md-3 col-xs-6">
+			<%= button_to "Music", '//www.audiowithdrawal.bandcamp.com', @external_url %>
 		</div>
-		<div class="col-md-4 col-xs-6">
-			intro
+		<div class="col-md-3 col-xs-6">
+			<p>Sound Store</p>
 		</div>
-		<div class="col-md-4 col-xs-12">
-			intro
+		<div class="col-md-3 col-xs-6">
+			<%= button_to "Featured Artist", content_featured_works_path, method: :get %>
+		</div>
+		<div class="col-md-3 col-xs-6">
+			<%= button_to "Contact Us", content_contact_us_path, method: :get %>
 		</div>
 	</div>
-	<div class="row center featured_works_section" style="height:700px; background-color: lightgrey;">
+	<div class="row center featured_works_section" style="height:100%; background-color: lightgrey;">
 
-		<div class="col-md-4 col-xs-6">
+		<div class="col-md-12 col-xs-12" style="height: 50px;">
 			Featured Works Block
 		</div>
-	</div>
-	<div class="row center works_section" style="height:50px; background-color: lightblue;">
-
-		<div class="col-md-6 col-md-push-3 col-xs-6">
-			Works <br>
-			<%= link_to raw(" Works <i class='glyphicon glyphicon-plus-sign push_right'></i>"), {controller: "content", action: "works"} %>
+		<div class="col-md-6 col-xs-12" id="top_left">
+			<iframe width='540' height='250' src='https://www.youtube.com/embed/XGSy3_Czz8k'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
+		</div>
+		<div class="col-md-6 col-xs-12" id="top_right">
+			<iframe width='540' height='250' src='https://www.youtube.com/embed/XGSy3_Czz8k'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
+		</div>
+		<div class="col-md-6 col-xs-12" id="mid_left" style="margin-top: 100px;">
+			<iframe width='540' height='250' src='https://www.youtube.com/embed/XGSy3_Czz8k'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
+		</div>
+		<div class="col-md-6 col-xs-12" id="mid_right" style="margin-top: 100px;">
+			<iframe width='540' height='250' src='https://www.youtube.com/embed/XGSy3_Czz8k'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
 		</div>
 	</div>
-	<div class="row center" style="height:450px; background-color: white;">
-
-		<div class="col-md-4 col-xs-6">
-			Wikr
-		</div>
-		<div class="col-md-4 col-xs-6">
-			Wierd phishes
-		</div>
-		<div class="col-md-4 col-xs-12">
-			Luke
-		</div>
-	</div>
-	<div class="row center contact_us_section" style="height:450px; background-color: lightgrey;">
+	<div class="row center contact_us_section" style="height:450px; background-color: white;">
 
 		<div class="col-md-6 col-xs-6">
 			Contact Us

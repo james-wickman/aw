@@ -1,3 +1,92 @@
 // Place all the styles related to the content controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.lukes_compositions_page {
+	background: image-url("sheet_music.jpg");
+	background-repeat: no-repeat;
+	background-size:100%;
+}
+.weird_phishes_page {
+	background: image-url("weird_phishes_back.jpg");
+	background-repeat: no-repeat;
+	background-size:100%;
+}
+.wikrs_page {
+	background: image-url("wikr_wallpaper.jpg");
+	background-repeat: no-repeat;
+	background-size:100%;
+}
+.intro_section {
+
+	background: image-url("sheet_music.jpg");
+	background-repeat: no-repeat;
+	background-size:100%;
+	color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+.featured_works_section {
+	background: image-url("leather.jpg");
+	background-size:100%;
+	color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline:0;
+}
+.button_to input{
+	color: blue;
+	box-shadow: 6px 6px 6px black;
+}
+
+svg {
+  padding: 5px;
+}
+path {
+  fill: red;
+  stroke: #646464;
+  stroke-width:2px;
+  stroke-dasharray: 2,2;
+  stroke-linejoin: round;
+}
+
+.side_arrow {
+
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  margin-top: 100px;
+  margin-left: 0px;
+  width: 70px;
+  height: 90px;
+}
+.right {
+	margin-left: 10px;
+}
+.left:hover polyline,
+.left:focus polyline {
+  stroke-width: 6;
+}
+
+.left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+  stroke-width: 6;
+}
+
+.right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}

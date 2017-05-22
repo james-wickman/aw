@@ -29,9 +29,9 @@ class ContentController < ApplicationController
       :text => "#{message}"
       p "status ===========" + status
       if status == 200
-        format.js
+        format.html { redirect_to root_path, :flash => {:notice => "Email successfully sent"} }
       else
-
+        format.html { redirect_to root_path, :flash => {:alert => "Email was not sent correctly"} }
       end
     end
   end

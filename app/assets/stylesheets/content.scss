@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@font-face{
+  font-family:"Beyno";
+  src:url(asset-path('fonts/BEYNO.ttf'));
+}
+.scoring_samples {
+	font-family: "Beyno";
+}
+.featured_works{
+	font-family: "Beyno";
+}
 .lukes_compositions_page {
 	background: image-url("sheet_music.jpg");
 	background-repeat: no-repeat;

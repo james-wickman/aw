@@ -37,11 +37,17 @@
                     <li>
                         <a class="scroll_button contact_us_button">Contact Us<i class='sub_icon glyphicon glyphicon-phone-alt'></i></a>
                     </li>
-                    <ul style="height: 150px;">
-                    	
+                    <ul style="padding-left: 0px; padding-top: 20px;">
+                        <%= link_to image_tag("Twit.png", :size=> '70x70'), "https://twitter.com/AudioWithdrawal" %>
+                        <%= link_to image_tag("twitch.png", :size=> '70x70'), "https://www.twitch.tv/audiowithdrawal" %>
+                        <%= link_to image_tag("utub.png", :size=> '70x70'), "https://www.youtube.com/channel/UCKH1iz7ic0OVXmktxeUL3AA" %>
+                       
                     </ul>
-                    <ul>
-                        <p class="scroll_button social_media_button" style="color: white;">Social Media <br>facebook</p>
+                    <ul style="padding-left: 0px;">
+                        <%= link_to image_tag("fbook.png", :size=> '70x70'), "https://www.facebook.com/AudioWithdrawal/" %>
+                        <%= link_to image_tag("bc.png", :size=> '70x70'), "https://audiowithdrawal.bandcamp.com/" %>
+                        <%= link_to image_tag("cloud.png", :size=> '70x70'), "https://soundcloud.com/audiowithdrawal" %>
+                        
                     </ul>
                 <% else %>
                     <li>

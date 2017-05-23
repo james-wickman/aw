@@ -27,11 +27,10 @@ class ContentController < ApplicationController
       :to => "audiowithdrawal@gmail.com", # change too send_to_email when done with testing and after you have set up autherized domain.  will ned to authorize recipients, ie send to emails.
       :subject => "#{subject}",
       :text => "#{message}"
-      p "status ===========" + status
       if status == 200
-        format.html { redirect_to root_path, :flash => {:notice => "Email successfully sent"} }
+        redirect_to root_path, :flash => {:notice => "Email successfully sent"}
       else
-        format.html { redirect_to root_path, :flash => {:alert => "Email was not sent correctly"} }
+        redirect_to root_path, :flash => {:alert => "Email was not sent correctly"}
       end
     end
   end

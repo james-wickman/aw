@@ -1,0 +1,4 @@
+
+
+<% p @music_pages[@i] %>
+$('#container').html("<%= escape_javascript(render partial: 'content/page_template', locals: {name: @music_pages[@i]})  %>");

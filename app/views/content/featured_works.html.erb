@@ -1,27 +1,15 @@
+
+
+<div class="container-fluid lukes_compositions_page page" id="container" style="padding-left: 100px; width: 100%; height: 700px;">
+
 <% music_pages = ['lukes_compositions', 'weird_phishes', 'wikr']  %>
-<% i = 0 %>
+<% i = @i %>
 <%= render 'page_template', name: music_pages[i] %> 
  
-
+</div>
 
 <script>
-	$('.left_arrow').on('click', function() {
-		<% i = i + 1 %>
-		<% if i >3 then i = 0 end %>
-		<% p i %>
-		$('#container').html("<%= escape_javascript(render :partial => 'page_template', locals: {name: music_pages[i]}) %>");
-		console.log("<%=i%>")
-		$(".mid_mid").html("");
-	})
-	$('.right_arrow').on('click', function() {
-		<% i = i - 1 %>
-		<% if i < 0 then i = 3 end %>
-		<% p i %>
-		$('#container').html("<%= escape_javascript(render :partial => 'page_template', locals: {name: music_pages[i]}) %>");
-		
-		$("#page_page_mid").html("");
-	})
-
+	
 	console.log($('.you_tube_spot')[0]);
 	$(".you_tube_spot").on('click', function() {
 		$(".you_tube_spot").removeClass('hidden');

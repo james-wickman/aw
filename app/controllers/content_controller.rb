@@ -3,6 +3,7 @@ class ContentController < ApplicationController
   end
 
   def featured_works
+    @i = 0
     @lukes_compositions = Video.where(section: "lukes_compositions")
     @weird_phishes = Video.where(section: "weird_phishes")
     @wikr = Video.where(section: "wikr")
@@ -10,17 +11,37 @@ class ContentController < ApplicationController
   end
 
   def left_arrow
-    p params[:video][:name]
-    i = i + 1 
-    if i >3 then i = 0 end 
-    p i 
+    @lukes_compositions = Video.where(section: "lukes_compositions")
+    @weird_phishes = Video.where(section: "weird_phishes")
+    @wikr = Video.where(section: "wikr")
+    @video = Video.new
+    respond_to do |format|
+      @music_pages = ['lukes_compositions', 'weird_phishes', 'wikr']
+      name = params[:video][:name]
+      p name
+      @i = @music_pages.index(name)
+      @i = @i + 1 
+      p @i
+      if @i >2 then @i = 0 end 
+      format.js
+    end
   end
 
-  def right_arrow 
-    p params[:video][:name]
-    i = i - 1 
-    if i < 0 then i = 3 end 
-    p i 
+  def right_arrow
+    @lukes_compositions = Video.where(section: "lukes_compositions")
+    @weird_phishes = Video.where(section: "weird_phishes")
+    @wikr = Video.where(section: "wikr")
+    @video = Video.new
+    respond_to do |format|
+      @music_pages = ['lukes_compositions', 'weird_phishes', 'wikr']
+      name = params[:video][:name]
+      p name
+      @i = @music_pages.index(name)
+      @i = @i - 1 
+      p @i
+      if @i < 0 then @i = 2 end 
+      format.js
+    end
   end
 
 

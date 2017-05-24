@@ -7,8 +7,8 @@
                           PATCH  /videos/:id(.:format)             videos#update
                           PUT    /videos/:id(.:format)             videos#update
                           DELETE /videos/:id(.:format)             videos#destroy
-       content_left_arrow POST   /content/left_arrow(.:format)     content#left_arrow
-      content_right_arrow POST   /content/right_arrow(.:format)    content#right_arrow
+       content_left_arrow GET    /content/left_arrow(.:format)     content#left_arrow
+      content_right_arrow GET    /content/right_arrow(.:format)    content#right_arrow
             content_works GET    /content/works(.:format)          content#works
    content_featured_works GET    /content/featured_works(.:format) content#featured_works
        content_contact_us GET    /content/contact_us(.:format)     content#contact_us

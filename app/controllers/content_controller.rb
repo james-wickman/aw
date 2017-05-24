@@ -3,6 +3,9 @@ class ContentController < ApplicationController
   end
 
   def featured_works
+    @lukes_compositions = Video.where(section: "lukes_compositions")
+    @weird_phishes = Video.where(section: "weird_phishes")
+    @wikr = Video.where(section: "wikr")
   end
 
   def contact_us

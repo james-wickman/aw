@@ -1,140 +1,148 @@
 
-<div class="container-fluid lukes_compositions_page page" style="padding-left: 100px; width: 100%; height: 700px;">
-	<div class="row home_section" style="height: 120px;">
-		<%= image_tag "Lukescomp.png", :size=> '1100x450' %>
-	</div>
-	<div class="row home_section" style="">
-		<div class="col-md-1 col-xs-1">
+<% if @lukes_compositions[7][:key] %>
+	
+	<div class="container-fluid lukes_compositions_page page" style="padding-left: 100px; width: 100%; height: 700px;">
+		<div class="row home_section" style="height: 120px;">
+			<%= image_tag "Lukescomp.png", :size=> '1100x450' %>
 		</div>
-		<div class="col-md-3 col-xs-3" id="top_left">
-			<img src="http://img.youtube.com/vi/nQEsqEqAl1k/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot first_spot" data-index="nQEsqEqAl1k" data-page="lukes_compositions_page_mid">
-			</img>
-		</div>
-		<div class="col-md-4 col-xs-4" id="top_middle" style="margin-left: 20px;">
-			<img src="http://img.youtube.com/vi/_TiamBoXckI/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="_TiamBoXckI" data-page="lukes_compositions_page_mid">
-			</img>
-		</div>
-		<div class="col-md-3 col-xs-3" id="top_right">
-			<img src="http://img.youtube.com/vi/7ijKNpJIsCc/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="7ijKNpJIsCc" data-page="lukes_compositions_page_mid">
-			</img>
-		</div>
-	</div>
-	<div class="row home_section" style="height: 305px;">
-		<div class="col-md-1 col-xs-1">
-			<button class="side_arrow left" data-place="weird_phishes_page">
-			  <svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
-			    <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
-				45.63,75.8 0.375,38.087 45.63,0.375 "/>
-			  </svg>  
-			</button>
-		</div>
-		<div class="col-md-2 col-xs-2" id="mid_left" style="margin-top: 100px;">
-			<img src="http://img.youtube.com/vi/cYQFbzN6ZgQ/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="cYQFbzN6ZgQ" data-page="lukes_compositions_page_mid">
-			</img>
-		</div>
-		<div class="col-md-5 col-xs-5 mid_mid" style="height: 305px;">
-			<div id="lukes_compositions_page_mid">
-				
+		<div class="row home_section" style="">
+			<div class="col-md-1 col-xs-1">
+			</div>
+			<div class="col-md-3 col-xs-3" id="top_left">
+				<img src="http://img.youtube.com/vi/<%= @lukes_compositions[0][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot first_spot" data-index="<%= @lukes_compositions[0][:key] %>" data-page="lukes_compositions_page_mid">
+				</img>
+			</div>
+			<div class="col-md-4 col-xs-4" id="top_middle" style="margin-left: 20px;">
+				<img src="http://img.youtube.com/vi/<%= @lukes_compositions[1][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @lukes_compositions[1][:key] %>" data-page="lukes_compositions_page_mid">
+				</img>
+			</div>
+			<div class="col-md-3 col-xs-3" id="top_right">
+				<img src="http://img.youtube.com/vi/<%= @lukes_compositions[2][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @lukes_compositions[2][:key] %>" data-page="lukes_compositions_page_mid">
+				</img>
 			</div>
 		</div>
-		<div class="col-md-2 col-xs-2" id="mid_right" style="margin-top: 100px;">
-			<img src="http://img.youtube.com/vi/o3fL-GytLt0/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="o3fL-GytLt0" data-page="lukes_compositions_page_mid">
-			</img>
+		<div class="row home_section" style="height: 305px;">
+			<div class="col-md-1 col-xs-1">
+				<button class="side_arrow left" data-place="weird_phishes_page">
+				  <svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+				    <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+					45.63,75.8 0.375,38.087 45.63,0.375 "/>
+				  </svg>  
+				</button>
+			</div>
+			<div class="col-md-2 col-xs-2" id="mid_left" style="margin-top: 100px;">
+				<img src="http://img.youtube.com/vi/<%= @lukes_compositions[3][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @lukes_compositions[3][:key] %>" data-page="lukes_compositions_page_mid">
+				</img>
+			</div>
+			<div class="col-md-5 col-xs-5 mid_mid" style="height: 305px;">
+				<div id="lukes_compositions_page_mid">
+					
+				</div>
+			</div>
+			<div class="col-md-2 col-xs-2" id="mid_right" style="margin-top: 100px;">
+				<img src="http://img.youtube.com/vi/<%= @lukes_compositions[4][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @lukes_compositions[4][:key] %>" data-page="lukes_compositions_page_mid">
+				</img>
+			</div>
+			<div class="col-md-1 col-xs-1">
+				<button class="side_arrow right" data-place="wikrs_page">
+				  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+				    <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+					0.375,0.375 45.63,38.087 0.375,75.8 "/>
+				  </svg>
+				</button>
+			</div>
 		</div>
-		<div class="col-md-1 col-xs-1">
-			<button class="side_arrow right" data-place="wikrs_page">
-			  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
-			    <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
-				0.375,0.375 45.63,38.087 0.375,75.8 "/>
-			  </svg>
-			</button>
-		</div>
-	</div>
-	<div class="row home_section" style="">
-		<div class="col-md-1 col-xs-1">
-		</div>
-		<div class="col-md-3 col-xs-3" id="bottom_left">
-			<img src="http://img.youtube.com/vi/1eDz1fUguR8/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="1eDz1fUguR8" data-page="lukes_compositions_page_mid">
-			</img>
-		</div>
-		<div class="col-md-4 col-xs-4" id="bottom_mid" style="margin-left: 20px;">
-			<img src="http://img.youtube.com/vi/dMjw0ncoID4/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="dMjw0ncoID4" data-page="lukes_compositions_page_mid">
-			</img>
-		</div>
-		<div class="col-md-3 col-xs-3" id="bottom_right">
-			<img src="http://img.youtube.com/vi/QSMYEpQVrAI/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="QSMYEpQVrAI" data-page="lukes_compositions_page_mid">
-			</img>
-		</div>
-	</div>
-</div>
-<div class="container-fluid weird_phishes_page hidden page" style="padding-left: 100px; width: 100%; height: 700px;">
-	<div class="row home_section" style="height: 120px;">
-		<%= image_tag"phishes_top.png", :size=> '1100x450' %>
-	</div>
-	<div class="row home_section" style="">
-		<div class="col-md-1 col-xs-1">
-		</div>
-		<div class="col-md-3 col-xs-3" id="top_left">
-			<img src="http://img.youtube.com/vi/2vo_VJbFL9o/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot first_spot" data-index="2vo_VJbFL9o" data-page="weird_phishes_page_mid">
-			</img>
-		</div>
-		<div class="col-md-4 col-xs-4" id="top_middle" style="margin-left: 20px;">
-			<img src="http://img.youtube.com/vi/N-XySDMw3jw/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="N-XySDMw3jw" data-page="weird_phishes_page_mid">
-			</img>
-		</div>
-		<div class="col-md-3 col-xs-3" id="top_right">
-			<img src="http://img.youtube.com/vi/u6sAreSs2tw/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="u6sAreSs2tw" data-page="weird_phishes_page_mid">
-			</img>
+		<div class="row home_section" style="">
+			<div class="col-md-1 col-xs-1">
+			</div>
+			<div class="col-md-3 col-xs-3" id="bottom_left">
+				<img src="http://img.youtube.com/vi/<%= @lukes_compositions[5][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @lukes_compositions[5][:key] %>" data-page="lukes_compositions_page_mid">
+				</img>
+			</div>
+			<div class="col-md-4 col-xs-4" id="bottom_mid" style="margin-left: 20px;">
+				<img src="http://img.youtube.com/vi/<%= @lukes_compositions[6][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @lukes_compositions[6][:key] %>" data-page="lukes_compositions_page_mid">
+				</img>
+			</div>
+			<div class="col-md-3 col-xs-3" id="bottom_right">
+				<img src="http://img.youtube.com/vi/<%= @lukes_compositions[7][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @lukes_compositions[7][:key] %>" data-page="lukes_compositions_page_mid">
+				</img>
+			</div>
 		</div>
 	</div>
-	<div class="row home_section" style="height: 305px;">
-		<div class="col-md-1 col-xs-1">
-			<button class="side_arrow left" data-place="wikrs_page">
-			  <svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
-			    <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
-				45.63,75.8 0.375,38.087 45.63,0.375 "/>
-			  </svg>  
-			</button>
+<% end %>
+<% if @weird_phishes[7] %>
+	
+	<div class="container-fluid weird_phishes_page hidden page" style="padding-left: 100px; width: 100%; height: 700px;">
+		<div class="row home_section" style="height: 120px;">
+			<%= image_tag"phishes_top.png", :size=> '1100x450' %>
 		</div>
-		<div class="col-md-2 col-xs-2" id="mid_left" style="margin-top: 100px;">
-			<img src="http://img.youtube.com/vi/uu0nNVnESd8/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="uu0nNVnESd8" data-page="weird_phishes_page_mid">
-			</img>
+		<div class="row home_section" style="">
+			<div class="col-md-1 col-xs-1">
+			</div>
+			<div class="col-md-3 col-xs-3" id="top_left">
+				<img src="http://img.youtube.com/vi/<%= @weird_phishes[0][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot first_spot" data-index="<%= @weird_phishes[0][:key] %>" data-page="weird_phishes_page_mid">
+				</img>
+			</div>
+			<div class="col-md-4 col-xs-4" id="top_middle" style="margin-left: 20px;">
+				<img src="http://img.youtube.com/vi/<%= @weird_phishes[1][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @weird_phishes[1][:key] %>" data-page="weird_phishes_page_mid">
+				</img>
+			</div>
+			<div class="col-md-3 col-xs-3" id="top_right">
+				<img src="http://img.youtube.com/vi/<%= @weird_phishes[2][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @weird_phishes[2][:key] %>" data-page="weird_phishes_page_mid">
+				</img>
+			</div>
 		</div>
-		<div class="col-md-5 col-xs-5 mid_mid" style="height: 305px;">
-			<div id="weird_phishes_page_mid">
+		<div class="row home_section" style="height: 305px;">
+			<div class="col-md-1 col-xs-1">
+				<button class="side_arrow left" data-place="wikrs_page">
+				  <svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+				    <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+					45.63,75.8 0.375,38.087 45.63,0.375 "/>
+				  </svg>  
+				</button>
+			</div>
+			<div class="col-md-2 col-xs-2" id="mid_left" style="margin-top: 100px;">
+				<img src="http://img.youtube.com/vi/<%= @weird_phishes[3][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @weird_phishes[3][:key] %>" data-page="weird_phishes_page_mid">
+				</img>
+			</div>
+			<div class="col-md-5 col-xs-5 mid_mid" style="height: 305px;">
+				<div id="weird_phishes_page_mid">
+					
+				</div>
 				
 			</div>
-			
+			<div class="col-md-2 col-xs-2" id="mid_right" style="margin-top: 100px;">
+				<img src="http://img.youtube.com/vi/<%= @weird_phishes[4][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @weird_phishes[4][:key] %>" data-page="weird_phishes_page_mid">
+				</img>
+			</div>
+			<div class="col-md-1 col-xs-1">
+				<button class="side_arrow right" data-place="lukes_compositions_page">
+				  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+				    <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+					0.375,0.375 45.63,38.087 0.375,75.8 "/>
+				  </svg>
+				</button>
+			</div>
 		</div>
-		<div class="col-md-2 col-xs-2" id="mid_right" style="margin-top: 100px;">
-			<img src="http://img.youtube.com/vi/dOVPfU6Ayms/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="dOVPfU6Ayms" data-page="weird_phishes_page_mid">
-			</img>
-		</div>
-		<div class="col-md-1 col-xs-1">
-			<button class="side_arrow right" data-place="lukes_compositions_page">
-			  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
-			    <polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
-				0.375,0.375 45.63,38.087 0.375,75.8 "/>
-			  </svg>
-			</button>
+		<div class="row home_section" style="">
+			<div class="col-md-1 col-xs-1">
+			</div>
+			<div class="col-md-3 col-xs-3" id="bottom_left">
+				<img src="http://img.youtube.com/vi/<%= @weird_phishes[5][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @weird_phishes[5][:key] %>" data-page="weird_phishes_page_mid">
+				</img>
+			</div>
+			<div class="col-md-4 col-xs-4" id="bottom_mid" style="margin-left: 20px;">
+				<img src="http://img.youtube.com/vi/<%= @weird_phishes[6][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @weird_phishes[6][:key] %>" data-page="weird_phishes_page_mid">
+				</img>
+			</div>
+			<div class="col-md-3 col-xs-3" id="top_right">
+				<img src="http://img.youtube.com/vi/<%= @weird_phishes[7][:key] %>/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="<%= @weird_phishes[7][:key] %>" data-page="weird_phishes_page_mid">
+				</img>
+			</div>
 		</div>
 	</div>
-	<div class="row home_section" style="">
-		<div class="col-md-1 col-xs-1">
-		</div>
-		<div class="col-md-3 col-xs-3" id="bottom_left">
-			<img src="http://img.youtube.com/vi/wuxUBx2WNaA/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="wuxUBx2WNaA" data-page="weird_phishes_page_mid">
-			</img>
-		</div>
-		<div class="col-md-4 col-xs-4" id="bottom_mid" style="margin-left: 20px;">
-			<img src="http://img.youtube.com/vi/O8NtEbma1jk/mqdefault.jpg" style=" height:100px; width:200px;" class="you_tube_spot" data-index="O8NtEbma1jk" data-page="weird_phishes_page_mid">
-			</img>
-		</div>
-		<div class="col-md-3 col-xs-3" id="bottom_right">
-			
-		</div>
-	</div>
-</div>
+<% end %>
+
 <div class="container-fluid wikrs_page hidden page" style="padding-left: 100px; width: 100%; height: 700px;">
 	<div class="row home_section" style="height: 120px;">
 		<%= image_tag "wikr_head.png", :size=> '1100x450' %>

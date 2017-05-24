@@ -3,10 +3,16 @@ class VideosController < ApplicationController
     @lukes_compositions = Video.where(section: "lukes_compositions")
     @weird_phishes = Video.where(section: "weird_phishes")
     @wikr = Video.where(section: "wikr")
+    @scoring_samples = Video.where(section: "scoring_samples")
+    @featured_works = Video.where(section: "featured_works")
+    @video = Video.new
   end
 
   def new
     @video = Video.new
+    p params
+    @section = params[:video][:section]
+    p @section
   end
 
   def create

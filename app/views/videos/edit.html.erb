@@ -6,15 +6,15 @@
 		<div class="col-md-5 col-push-md-7 col-xs-8">
 			<%= form_for @video do |f| -%>
 				<%= f.label :url %><br />
-				<%= f.text_field :url, autofocus: true, class: "float_right" %><br />
+				<%= f.text_field :url, autofocus: true, :size => 80, class: "float_right" %><br />
 				<%= f.label :name %><br />
-				<%= f.text_field :name, class: "float_right" %><br />
+				<%= f.text_field :name, :size => 80, class: "float_right" %><br />
 				<%= f.label :key %><br />
-				<%= f.text_field :key, class: "float_right" %><br />
+				<%= f.text_field :key, :size => 80, class: "float_right" %><br />
 				<%= f.label :description %><br />
-				<%= f.text_field :description, class: "float_right" %><br />
+				<%= f.text_field :description, :size => 80, class: "float_right" %><br />
 				<%= f.label :section %><br />
-				<%= f.select :section, ['lukes_compositions', 'weird_phishes', 'wikr'], class: "float_right" %><br />
+				<%= f.select :section, ['lukes_compositions', 'weird_phishes', 'wikr', 'scoring_samples', 'featured_works'], class: "float_right" %><br />
 				<%= f.submit "submit", class: "submit_button" %>
 			<% end -%>
 		</div>

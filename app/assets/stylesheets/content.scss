@@ -51,7 +51,6 @@ img {
 	cursor: pointer;
 }
 footer {
-	
 	color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
@@ -119,7 +118,6 @@ path {
 polyline {
   transition: all 250ms ease-in-out;
 }
-
 input {
 	cursor: pointer;
 }
@@ -132,9 +130,36 @@ li {
 .twitter_pic {
 	
 }
+.new_admin {
+	margin-left: 200px;
+	margin-top: 50px;
+    height: 400px;
+}
+.alert {
+	margin-left: 200px;
+	color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+.notice {
+	margin-left: 200px;
+	color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+label {
+	color: #fff;
+	text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+input {
+	cursor: text;
+}
+.videos {
+	color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 
-
-
+}
+.admin_index_blocks {
+	min-height: 400px;
+}
 
 
 

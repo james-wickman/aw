@@ -1,2 +1,131 @@
-<h1>Videos#index</h1>
-<p>Find me in app/views/videos/index.html.erb</p>
+<div class="container-fluid lukes_compositions_block admin_index_blocks" style="padding: 0px; width: 100%;">
+	<div class="row home_section">
+		<div class="col-md-8 col-push-md-7 col-xs-8">
+		</div>
+		<div class="col-md-3 col-push-md-7 col-xs-3">
+			<button class="videos admin_weird_phishes">Weird Phishes</button>
+			<button class="videos admin_wikr">Wikr</button> <hr>
+			<% p @lukes_compositions.length %>
+			<% if @lukes_compositions.length < 8 %>
+				<%= button_to "Add New", new_video_path, method: :get %>
+			<% else %>
+				<h3>You have too many videos on this section, ether delete or edit one before you can add anouther.</h3>
+			<% end %>
+		</div>
+	</div>
+	<div class="row home_section">
+		<div class="col-md-4 col-xs-4">
+		</div>
+		<div class="col-md-6 col-xs-6">
+			<h1>Lukes Compositions</h1>
+		</div>
+	</div>
+	<% @lukes_compositions.each do |video| %>
+		<div class="row home_section">
+			<div class="col-md-12 col-xs-12 center videos">
+				<h4> <%= video.url  %> </h4>
+				<h4> <%= video.name  %> </h4>
+				<h4> <%= video.description  %> </h4>
+				<h4> <%= video.section  %> </h4>
+				<h4> <%= video.key  %> </h4>
+				<%= button_to "Edit", "/videos/#{video.id}/edit", method: :get %>
+				<%= button_to "Delete", "/videos/#{video.id}", method: :delete %> <hr>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<div class="container-fluid weird_phishes_block admin_index_blocks hidden" style="padding: 0px; width: 100%;">
+	<div class="row home_section">
+		<div class="col-md-8 col-push-md-7 col-xs-8">
+		</div>
+		<div class="col-md-3 col-push-md-7 col-xs-3">
+			<button class="videos admin_lukes_compositions">Lukes Compositions </button>
+			<button class="videos admin_wikr">Wikr</button> <hr>
+			<% p @lukes_compositions.length %>
+			<% if @lukes_compositions.length < 8 %>
+				<%= button_to "Add New", new_video_path, method: :get %>
+			<% else %>
+				<h3>You have too many videos on this section, ether delete or edit one before you can add anouther.</h3>
+			<% end %>
+		</div>
+	</div>
+	<div class="row home_section">
+		<div class="col-md-4 col-xs-4">
+		</div>
+		<div class="col-md-6 col-xs-6">
+			<h1>Weird Phishes</h1>
+		</div>
+	</div>
+	<% @weird_phishes.each do |video| %>
+		<div class="row home_section">
+			<div class="col-md-12 col-xs-12 center videos">
+				<h4> <%= video.url  %> </h4>
+				<h4> <%= video.name  %> </h4>
+				<h4> <%= video.description  %> </h4>
+				<h4> <%= video.section  %> </h4>
+				<h4> <%= video.key  %> </h4>
+				<%= button_to "Edit", "/videos/#{video.id}/edit", method: :get %>
+				<%= button_to "Delete", "/videos/#{video.id}", method: :delete %> <hr>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<div class="container-fluid wikr_block admin_index_blocks hidden" style="padding: 0px; width: 100%;">
+	<div class="row home_section">
+		<div class="col-md-8 col-push-md-7 col-xs-8">
+		</div>
+		<div class="col-md-3 col-push-md-7 col-xs-3">
+			<button class="videos admin_weird_phishes">Weird Phishes</button>
+			<button class="videos admin_lukes_compositions">Lukes Compositions</button> <hr>
+			<% p @lukes_compositions.length %>
+			<% if @lukes_compositions.length < 8 %>
+				<%= button_to "Add New", new_video_path, method: :get %>
+			<% else %>
+				<h3>You have too many videos on this section, ether delete or edit one before you can add anouther.</h3>
+			<% end %>
+		</div>
+	</div>
+	<div class="row home_section">
+		<div class="col-md-4 col-xs-4">
+		</div>
+		<div class="col-md-6 col-xs-6">
+			<h1>Wickr</h1>
+		</div>
+	</div>
+	<% @wikr.each do |video| %>
+		<div class="row home_section">
+			<div class="col-md-12 col-xs-12 center videos">
+				<h4> <%= video.url  %> </h4>
+				<h4> <%= video.name  %> </h4>
+				<h4> <%= video.description  %> </h4>
+				<h4> <%= video.section  %> </h4>
+				<h4> <%= video.key  %> </h4>
+				<%= button_to "Edit", "/videos/#{video.id}/edit", method: :get %>
+				<%= button_to "Delete", "/videos/#{video.id}", method: :delete %> <hr>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<script>
+	$('.admin_weird_phishes').on('click', function() {
+		$('.admin_index_blocks').addClass('hidden');
+		$('.weird_phishes_block').removeClass('hidden');
+	})
+	$('.admin_wikr').on('click', function() {
+		$('.admin_index_blocks').addClass('hidden');
+		$('.wikr_block').removeClass('hidden');
+	})
+	$('.admin_lukes_compositions').on('click', function() {
+		$('.admin_index_blocks').addClass('hidden');
+		$('.lukes_compositions_block').removeClass('hidden');
+	})
+</script>
+
+
+
+
+
+

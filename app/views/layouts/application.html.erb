@@ -106,6 +106,7 @@
                             <li><%= link_to "Admin", new_admin_session_path, method: :get, class: 'white' %></li>
                         <% else %>
                             <li><%= link_to "Admin", videos_path, method: :get, class: 'white' %></li>
+                            <li><%= link_to "Log Out", destroy_admin_session_path, method: :delete, class: 'white' %></li>
                         <% end %>
                         <!-- <li><%= link_to raw(" login"), new_admin_session_path %></li>
                         <li><%= link_to raw(" log out "), destroy_admin_session_path, method: :delete %></li> -->

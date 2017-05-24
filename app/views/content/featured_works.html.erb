@@ -1,19 +1,12 @@
-
-	
-<div class="container-fluid lukes_compositions_page page" id="container" style="padding-left: 100px; width: 100%; height: 700px;">
-	
-</div>
-
-
+<% music_pages = ['lukes_compositions', 'weird_phishes', 'wikr']  %>
+<% i = 0 %>
+<%= render 'page_template', name: music_pages[i] %> 
  
 
 
 <script>
-	<% music_pages = ['lukes_compositions', 'weird_phishes', 'wikr']  %>
-	<% i = 0 %>
-	$('#container').html("<%= escape_javascript(render :partial => 'page_template', locals: {name: music_pages[i]}) %>");
 	$('.left_arrow').on('click', function() {
-		<% i += 1 %>
+		<% i = i + 1 %>
 		<% if i >3 then i = 0 end %>
 		<% p i %>
 		$('#container').html("<%= escape_javascript(render :partial => 'page_template', locals: {name: music_pages[i]}) %>");
@@ -21,7 +14,7 @@
 		$(".mid_mid").html("");
 	})
 	$('.right_arrow').on('click', function() {
-		<% i -= 1 %>
+		<% i = i - 1 %>
 		<% if i < 0 then i = 3 end %>
 		<% p i %>
 		$('#container').html("<%= escape_javascript(render :partial => 'page_template', locals: {name: music_pages[i]}) %>");

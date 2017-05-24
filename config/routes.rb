@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   resources :videos
 
+  post 'content/left_arrow'
+
+  post 'content/right_arrow'
+
   get 'content/works'
 
   get 'content/featured_works'

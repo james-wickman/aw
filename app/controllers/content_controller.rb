@@ -6,9 +6,21 @@ class ContentController < ApplicationController
     @lukes_compositions = Video.where(section: "lukes_compositions")
     @weird_phishes = Video.where(section: "weird_phishes")
     @wikr = Video.where(section: "wikr")
+    @video = Video.new
   end
 
-  def contact_us
+  def left_arrow
+    p params[:video][:name]
+    i = i + 1 
+    if i >3 then i = 0 end 
+    p i 
+  end
+
+  def right_arrow 
+    p params[:video][:name]
+    i = i - 1 
+    if i < 0 then i = 3 end 
+    p i 
   end
 
 

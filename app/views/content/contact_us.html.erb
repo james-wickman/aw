@@ -20,47 +20,6 @@
 	</div>
 </div>
 
-<script>
-	$(".info_button").on('click', function() {
-		console.log("info");
-		$(".email_container").removeClass('hidden');
-		$(".email_info_container").removeClass('shading');
-		$(".email_info_container").addClass('basic_border');
-		$(".send_to_email").val("info@newpointetools.com");
-		$(".what_depo").text("More Information");
-	});
-	$(".sales_button").on('click', function() {
-		console.log('sales');
-		$(".email_container").removeClass('hidden');
-		$(".email_info_container").removeClass('shading');
-		$(".email_info_container").addClass('basic_border');
-		$(".send_to_email").val("sales@newpointetools.com");
-		$(".what_depo").text("Sales Information");
-	});
-	$(".support_button").on("click", function(){
-		console.log('support');
-		$(".email_container").removeClass('hidden');
-		$(".email_info_container").removeClass('shading');
-		$(".email_info_container").addClass('basic_border');
-		$(".send_to_email").val("support@newpointetools.com");
-		$(".what_depo").text("More Support");
-	});
-	$(".submit_email").on("click", function() {
-		var name = $('.customer_name').val();
-		var email = $('.customer_email').val();
-		var input = $('.customer_input').val();
-		console.log(name);
-		console.log(email);
-		console.log(input);
-	})
-	$(".close_contact_user").on("click", function() {
-		console.log('close0');
-		$(".email_container").addClass('hidden');
-		$(".customer_email").val('');
-		$(".customer_name").val('');
-		$(".customer_input").val('');
-	})
-</script>
 
 
 

@@ -1,0 +1,76 @@
+
+<% type = instance_variable_get(("@" + name).intern) %>
+	<% i = @i %>
+	<div class="row home_section" style="height: 120px;">
+		<%= image_tag name + ".png", :size=> '1100x450' %>
+	</div>
+	<div class="row home_section" style="min-height: 100px;">
+		<div class="col-md-1 col-xs-1">
+		</div>
+		<div class="col-md-3 col-xs-3" id="top_left">
+			<% if type[0] %>
+				<%= works_imgs(name, type[0][:key]) %>
+			<% end %>
+		</div>
+		<div class="col-md-4 col-xs-4" id="top_middle" style="margin-left: 20px;">
+			<% if type[1] %>
+				<%= works_imgs(name, type[1][:key]) %>
+			<% end %>
+		</div>
+		<div class="col-md-3 col-xs-3" id="top_right">
+			<% if type[2] %>
+				<%= works_imgs(name, type[2][:key]) %>
+			<% end %>
+		</div>
+	</div>
+	<div class="row home_section" style="height: 305px;">
+		<div class="col-md-1 col-xs-1">
+			<%= form_for @video, :url => content_left_arrow_path,:format => :js, method: :get, remote: :true do |f| -%>
+				<%= f.hidden_field :name, value: name %>
+				<%= button_tag( :class => "side_arrow left") do %>
+					<svg width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'><polyline fill='none' stroke='#FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' points='45.63,75.8 0.375,38.087 45.63,0.375 '/></svg>
+				<% end %>
+			<% end %>
+		</div>
+		<div class="col-md-2 col-xs-2" id="mid_left" style="margin-top: 100px;">
+			<% if type[3] %>
+				<%= works_imgs(name, type[3][:key]) %>
+			<% end %>
+		</div>
+		<div class="col-md-5 col-xs-5 mid_mid" style="height: 305px;">
+			<div id="page_page_mid">
+			</div>
+		</div>
+		<div class="col-md-2 col-xs-2" id="mid_right" style="margin-top: 100px;">
+			<% if type[4] %>
+				<%= works_imgs(name, type[4][:key]) %>
+			<% end %>
+		</div>
+		<div class="col-md-1 col-xs-1">
+			<%= form_for @video, :url => content_right_arrow_path,:format => :js, method: :get, remote: :true do |f| -%>
+				<%= f.hidden_field :name, value: name %>
+				<%= button_tag( :class => "side_arrow right") do %>
+					<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'><polyline fill='none' stroke='#FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8 '/></svg>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+	<div class="row home_section" style="">
+		<div class="col-md-1 col-xs-1">
+		</div>
+		<div class="col-md-3 col-xs-3" id="bottom_left">
+			<% if type[5] %>
+				<%= works_imgs(name, type[5][:key]) %>
+			<% end %>
+		</div>
+		<div class="col-md-4 col-xs-4" id="bottom_mid" style="margin-left: 20px;">
+			<% if type[6] %>
+				<%= works_imgs(name, type[6][:key]) %>
+			<% end %>
+		</div>
+		<div class="col-md-3 col-xs-3" id="bottom_right">
+			<% if type[7] %>
+				<%= works_imgs(name, type[7][:key]) %>
+			<% end %>
+		</div>
+	</div>

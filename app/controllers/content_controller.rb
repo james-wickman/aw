@@ -3,15 +3,49 @@ class ContentController < ApplicationController
   end
 
   def featured_works
+    @i = 0
+    @lukes_compositions = Video.where(section: "lukes_compositions")
+    @weird_phishes = Video.where(section: "weird_phishes")
+    @wikr = Video.where(section: "wikr")
+    @video = Video.new
   end
 
-  def contact_us
+  def left_arrow
+    @lukes_compositions = Video.where(section: "lukes_compositions")
+    @weird_phishes = Video.where(section: "weird_phishes")
+    @wikr = Video.where(section: "wikr")
+    @video = Video.new
+    respond_to do |format|
+      @music_pages = ['lukes_compositions', 'weird_phishes', 'wikr']
+      name = params[:video][:name]
+      p name
+      @i = @music_pages.index(name)
+      @i = @i + 1 
+      p @i
+      if @i >2 then @i = 0 end 
+      format.js
+    end
+  end
+
+  def right_arrow
+    @lukes_compositions = Video.where(section: "lukes_compositions")
+    @weird_phishes = Video.where(section: "weird_phishes")
+    @wikr = Video.where(section: "wikr")
+    @video = Video.new
+    respond_to do |format|
+      @music_pages = ['lukes_compositions', 'weird_phishes', 'wikr']
+      name = params[:video][:name]
+      p name
+      @i = @music_pages.index(name)
+      @i = @i - 1 
+      p @i
+      if @i < 0 then @i = 2 end 
+      format.js
+    end
   end
 
 
   def send_email
-
-
     respond_to do |format|
       p params
       cust_name = params[:first_name] + ' ' + params[:last_name]

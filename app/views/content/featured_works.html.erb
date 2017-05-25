@@ -1,37 +1,10 @@
 
 
 <div class="container-fluid lukes_compositions_page page" id="container" style="padding-left: 100px; width: 100%; height: 700px;">
-
-<% music_pages = ['lukes_compositions', 'weird_phishes', 'wikr']  %>
-<% i = @i %>
-<%= render 'page_template', name: music_pages[i] %> 
- 
+	<% music_pages = ['lukes_compositions', 'weird_phishes', 'wikr']  %>
+	<% i = @i %>
+	<%= render 'page_template', name: music_pages[i] %> 
 </div>
-
-<script>
-	
-	console.log($('.you_tube_spot')[0]);
-	$(".you_tube_spot").on('click', function() {
-		$(".you_tube_spot").removeClass('hidden');
-		var data = $(this).attr('data-index');
-		var page = $(this).attr('data-page');
-		$(this).addClass('hidden');
-		console.log(data);
-		$("#page_page_mid ").html("<iframe width='500' height='300' src='https://www.youtube.com/embed/" + data + "'style='margin: auto;' frameborder='0' allowfullscreen></iframe>").hide();
-		var iframeSrc = $(this).attr('href');
-        $('#page_page_mid').fadeOut(10,function(){
-            $('#page_page_mid' + ' iframe').attr('src',iframeSrc);
-            $('#page_page_mid').fadeIn(1800);
-        });
-	})
-
-</script> 
-
-
-
-
-
-
 
 
 

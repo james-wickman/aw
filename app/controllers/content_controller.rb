@@ -46,8 +46,6 @@ class ContentController < ApplicationController
 
 
   def send_email
-
-
     respond_to do |format|
       p params
       cust_name = params[:first_name] + ' ' + params[:last_name]

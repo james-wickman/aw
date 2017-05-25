@@ -95,6 +95,9 @@ path {
 .right {
 	margin-left: 10px;
 }
+.left {
+    float: right; 
+}
 .left:hover polyline,
 .left:focus polyline {
   stroke-width: 6;

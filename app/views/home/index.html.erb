@@ -25,12 +25,12 @@
 			<%= button_to("You Tube", '//www.youtube.com/channel/UCKH1iz7ic0OVXmktxeUL3AA', {class: "intro_buttons"}) %>
 		</div>
 		<div class="col-md-2 col-xs-6">
-			<%= button_to(content_featured_works_path, {class: "intro_buttons"}, method: :get) do %>
+			<%= button_to(content_featured_works_path, class: "intro_buttons", method: :get) do %>
 				Music
 			<% end %>
 		</div>
 		<div class="col-md-2 col-xs-6">
-			<%= button_to(content_contact_us_path, {class: "intro_buttons"}, method: :get) do %>
+			<%= button_to(content_contact_us_path, class: "intro_buttons", method: :get) do %>
 				Contact Us
 			<% end %>
 		</div>

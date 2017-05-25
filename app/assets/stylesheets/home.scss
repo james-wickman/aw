@@ -6,12 +6,9 @@
 .home_main_pic {
 	width: 100%;
 }
-
-
 body {
   background: black;
 }
-
 .arrow {
   position: fixed;
   bottom: 50px;
@@ -19,28 +16,26 @@ body {
   margin-left:-20px;
   cursor: pointer;
 }
-
 .bounce {
 	-webkit-animation-name: bounce;
-	-moz-animation-name: bounce;
-	-o-animation-name: bounce;
-	animation-name: bounce;
+	   -moz-animation-name: bounce;
+	     -o-animation-name: bounce;
+	        animation-name: bounce;
 }
 .animated{-webkit-animation-fill-mode:both;
 -moz-animation-fill-mode:both;
 -ms-animation-fill-mode:both;
 -o-animation-fill-mode:both;
-
-            animation-iteration-count: infinite;
-       -moz-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+   -moz-animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
 
 animation-fill-mode:both;
 -webkit-animation-duration:2s;
--moz-animation-duration:2s;
--ms-animation-duration:2s;
--o-animation-duration:2s;
-animation-duration:2s;
+   -moz-animation-duration:2s;
+    -ms-animation-duration:2s;
+     -o-animation-duration:2s;
+        animation-duration:2s;
 }
 
 
@@ -149,16 +144,6 @@ $full-height: 100%;
     &:nth-child(7) {
       &:before {
         background-color: $side-color-7;
-      }
-    }
-    &:nth-child(8) {
-      &:before {
-        background-color: $side-color-8;
-      }
-    }
-    &:nth-child(9) {
-      &:before {
-        background-color: $side-color-9;
       }
     }
     &:hover {
@@ -335,11 +320,6 @@ $full-height: 100%;
 }
 
 
-
-
-
-
-
 #wrapper {
     padding-left: 0px;
     transition: all .4s ease 0s;
@@ -411,8 +391,6 @@ $full-height: 100%;
   display: block;
   text-decoration: none;
 }
-
-
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
   text-decoration: none;
@@ -435,9 +413,9 @@ $full-height: 100%;
 
 .sub_icon
 {
-    float:right;
-   padding-right: 25px;
-   padding-top:10px;
+  float:right;
+  padding-right: 25px;
+  padding-top:10px;
 }
 .content-header {
   height: 65px;

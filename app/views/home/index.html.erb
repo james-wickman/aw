@@ -1,7 +1,6 @@
 <div class="container-fluid" style="padding: 0px; width: 100%;">
 	<div class="row home_section">
 		<div class="col-md-12 col-xs-12">
-			
 			<%= image_tag "banner.jpg", :class => "home_main_pic" %>
 		</div>
 	</div>
@@ -36,21 +35,19 @@
 		<div class="col-md-12 col-xs-12 scoring_samples" style="height: 50px;">
 			<h3>SCORING SAMPLES</h3>
 		</div>
-		<div class="col-md-6 col-xs-12" id="top_left">
-			<iframe width='540' height='250' src='https://www.youtube.com/embed/oTqWSw9PLUI'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
-		</div>
-		<div class="col-md-6 col-xs-12" id="top_right">
-			<iframe width='540' height='250' src='https://www.youtube.com/embed/LvZdlUCVNYM'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
-		</div>
+		<% @scoring_samples.each do |score| %>
+			<div class="col-md-6 col-xs-12" id="top_left">
+				<iframe width='540' height='250' src='https://www.youtube.com/embed/<%= score[:key] %>'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
+			</div>
+		<% end %>
 		<div class="col-md-12 col-xs-12 featured_works" style="height: 50px;">
 			<h3>FEATURED WORKS</h3>
 		</div>
-		<div class="col-md-6 col-xs-12" id="mid_left">
-			<iframe width='540' height='250' src='https://www.youtube.com/embed/o3fL-GytLt0'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
-		</div>
-		<div class="col-md-6 col-xs-12" id="mid_right">
-			<iframe width='540' height='250' src='https://www.youtube.com/embed/nQEsqEqAl1k'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
-		</div>
+		<% @featured_works.each do |featured| %>
+			<div class="col-md-6 col-xs-12" id="mid_left">
+				<iframe width='540' height='250' src='https://www.youtube.com/embed/<%= featured[:key] %>'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
+			</div>
+		<% end %>
 	</div>
 	<div class="row center contact_us_section" style="height:300px; background-color: white;">
 
@@ -89,3 +86,13 @@
 		</div>
 	</div>
 </div>
+
+
+
+
+
+
+
+
+
+

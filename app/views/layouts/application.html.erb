@@ -19,9 +19,9 @@
         <nav class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <ul class='company_name' style='height:80px'>
-                    <%= link_to image_tag('aw_logo.png', :style => "height: 50px; float: right; margin-top: 15px; margin-right: 18px;"), root_path %>
+                    <%= link_to image_tag('aw_logo.png', :class => "logo_image float_right"), root_path %>
                 </ul>
-                <% if current_page?(root_path) %>
+                <% if current_page?(root_path) %> 
                     <li>
                         <a class="scroll_button home_button">Home<i class='sub_icon glyphicon glyphicon-home'></i></a>
                     </li>

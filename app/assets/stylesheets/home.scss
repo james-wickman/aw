@@ -2,15 +2,45 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+@font-face{
+  font-family:"Beyno";
+  src:url(asset-path('fonts/BEYNO.ttf'));
+}
 .home_main_pic {
 	width: 100%;
+}
+.logo_image {
+  height: 50px; 
+   
+  margin-top: 15px; 
+  margin-left: 18px; 
+  margin-right: 18px;
+}
+.float_right {
+  float: right;
 }
 body {
   background: black;
 }
 .social_media_buttons {
   padding: 0px;
+}
+.intro_buttons {
+  width: 200px;
+  background-color: white;
+  color: blue;
+  border: 2px solid black;
+  box-shadow: 6px 6px 6px black;
+  transition: padding-top 0.5s ease;
+  transition: background-color 2s ease;
+
+  &:hover {
+    padding-top: 5px;
+    font-family: "Beyno";
+    background-color: #46c9f7;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
 }
 .arrow {
   position: fixed;
@@ -40,8 +70,6 @@ animation-fill-mode:both;
      -o-animation-duration:2s;
         animation-duration:2s;
 }
-
-
 @-webkit-keyframes bounce {
 	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
 	60% {-webkit-transform: translateY(-15px);}
@@ -438,7 +466,7 @@ $full-height: 100%;
     transition: all .4s ease 0s;
   }
   #sidebar-wrapper {
-      left: 50px;
+      left: 0px;
   }
   #wrapper.active {
       padding-left: 160px;
@@ -449,3 +477,31 @@ $full-height: 100%;
       transition: all .4s ease 0s;
   }
 }
+.float {
+    background: red;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    display: block;
+    float: left; 
+    clear: both;
+}
+
+.left {
+    background: blue;
+    float: right;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

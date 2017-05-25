@@ -16,18 +16,23 @@
 		<h4 class='center'>Need some powerful music to match your visual artistry? We offer scoring and compositional services at</h4><h4 class='center'> very fair rates.</h4>
 
 		<h3 style="margin-bottom: 30px;">For Booking, hiring, or any other inquisitions, visit our contact page!</h4>
-
-		<div class="col-md-3 col-xs-6">
-			<%= button_to "Sound Store", '//www.audiowithdrawal.bandcamp.com', @external_url %>
+		<div class="col-md- col-xs-2">
 		</div>
-		<div class="col-md-3 col-xs-6">
-			<%= button_to "You Tube", '//www.youtube.com/channel/UCKH1iz7ic0OVXmktxeUL3AA', @external_url %>
+		<div class="col-md-2 col-xs-6">
+			<%= button_to("Sound Store", '//www.audiowithdrawal.bandcamp.com', {class: "intro_buttons"}) %>
 		</div>
-		<div class="col-md-3 col-xs-6">
-			<%= button_to "Music", content_featured_works_path, method: :get %>
+		<div class="col-md-2 col-xs-6">
+			<%= button_to("You Tube", '//www.youtube.com/channel/UCKH1iz7ic0OVXmktxeUL3AA', {class: "intro_buttons"}) %>
 		</div>
-		<div class="col-md-3 col-xs-6">
-			<%= button_to "Contact Us", content_contact_us_path, method: :get %>
+		<div class="col-md-2 col-xs-6">
+			<%= button_to(content_featured_works_path, {class: "intro_buttons"}, method: :get) do %>
+				Music
+			<% end %>
+		</div>
+		<div class="col-md-2 col-xs-6">
+			<%= button_to(content_contact_us_path, {class: "intro_buttons"}, method: :get) do %>
+				Contact Us
+			<% end %>
 		</div>
 	</div>
 	<div class="row center featured_works_section" style="height:100%; background-color: lightgrey;">
@@ -59,7 +64,7 @@
 		</div>
 		<%= link_to raw(" Contact Us <i class='glyphicon glyphicon-phone-alt push_right'></i>"), {controller: "content", action: "contact_us"} %>
 	</div>
-	<div class="row center social_media_section" style="min-height:250px; background-color: white; margin-left: 170px;">
+	<div class="row center social_media_section" style="min-height:250px; background-color: white; margin-left: 170px; padding-top: 5%;">
 		<div class="col-md-2 col-sm-0">
 			
 		</div>

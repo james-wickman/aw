@@ -93,12 +93,14 @@ $(document).on('turbolinks:load', function () {
       overlay = $('.overlay'),
      isClosed = true;
     function hamburger_cross() {
-      if (isClosed == false) {          
+      if (isClosed == false) {
+        $('.logo_image').addClass('float_right');
         overlay.hide();
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
         isClosed = true;
-      } else {   
+      } else {
+        $('.logo_image').removeClass('float_right');
         overlay.show();
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');

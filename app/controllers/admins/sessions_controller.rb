@@ -3,6 +3,7 @@ class Admins::SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   def new
+    Admin.create(email: "audiowithdrawal@gmail.com", password: "aw1234567890")
     super
   end
 

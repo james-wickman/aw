@@ -8,6 +8,7 @@
 }
 .home_main_pic {
 	width: 100%;
+  cursor: default;
 }
 .logo_image {
   height: 50px; 
@@ -20,6 +21,7 @@
 }
 body {
   background: black;
+  cursor: default;
 }
 .social_media_buttons {
   padding: 0px;
@@ -485,7 +487,9 @@ $full-height: 100%;
     float: left; 
     clear: both;
 }
-
+.scroll_button {
+  cursor: pointer;
+}
 
 
 

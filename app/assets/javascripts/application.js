@@ -38,10 +38,12 @@ $(document).on('turbolinks:load', function () {
     $(".customer_input").val('');
   })
   $(document).on("click", ".you_tube_spot", function() {
-    $(".you_tube_spot").removeClass('hidden');
+    $(".you_tube_spot").removeClass('pressed_in');
+    $(".you_tube_spot").addClass('pop_out');
     var data = $(this).attr('data-index');
     var page = $(this).attr('data-page');
-    $(this).addClass('hidden');
+    $(this).removeClass('pop_out');
+    $(this).addClass('pressed_in');
     console.log(data);
     $("#page_page_mid ").html("<iframe width='500' height='300' src='https://www.youtube.com/embed/" + data + "'style='margin: auto;' frameborder='0' allowfullscreen></iframe>").hide();
     var iframeSrc = $(this).attr('href');

@@ -152,21 +152,22 @@ label .videos {
     border-radius: 25px;
 	border: 2px solid black;
 }
-.pop_out {
-	margin-bottom: 5px;
-	box-shadow: 1px 0px $img_box_shadow, 0px 1px $img_box_shadow,
-              2px 1px $img_box_shadow, 1px 2px $img_box_shadow,
-              3px 2px $img_box_shadow, 2px 3px $img_box_shadow,
-              4px 3px $img_box_shadow, 3px 4px $img_box_shadow,
-              5px 4px $img_box_shadow, 4px 5px $img_box_shadow,
-              6px 5px $img_box_shadow, 5px 6px $img_box_shadow;
+.you_tube_spot {
+	border: 1px solid black;
+	transition: all ease 1s;
+    border-radius: 5px;
+    box-shadow: 0px 15px 0px #00823F;
+    margin-bottom: 15px;
+}
+.you_tube_spot:active {
+    box-shadow: 0 1px 0 #00823F;
+    bottom:-14px;
 }
 .pressed_in {
-	margin-top: 5px;
-	box-shadow: 1px 0px $img_box_shadow, 0px 1px $img_box_shadow,
-              2px 1px $img_box_shadow, 1px 2px $img_box_shadow,
-              3px 2px $img_box_shadow, 2px 3px $img_box_shadow,
-              3px 2px $img_box_shadow, 2px 3px $img_box_shadow;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	box-shadow: 0 1px 0 #00823F;
+    bottom:-14px;
 }
 
 

@@ -22,6 +22,11 @@ $(document).on('turbolinks:load', function () {
           scrollTop: $(".intro_section").offset().top},
           'slow');
   });
+  $(document).on('click', ".you_tube_spot", function() {
+      $('html,body').animate({
+          scrollTop: $(".you_tube_section").offset().top -80},
+          'slow');
+  });
   $(document).on("click", ".submit_email", function() {
     var name = $('.customer_name').val();
     var email = $('.customer_email').val();

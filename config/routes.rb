@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :videos
 
+  get '/robots.:format' => 'home#robots'
+
   get 'content/left_arrow'
 
   get 'content/right_arrow'

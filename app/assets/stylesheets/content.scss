@@ -90,7 +90,7 @@ path {
   cursor: pointer;
   position: absolute;
   top: 100%;
-  margin-top: 100px;
+  margin-top: 10px;
   margin-left: 0px;
   width: 70px;
   height: 90px;
@@ -145,20 +145,6 @@ label .videos {
 .admin_index_blocks {
 	min-height: 400px;
 }
-.you_tube_spot {
-	height:100px; 
-	width:200px;
-
-    border-radius: 25px;
-	border: 2px solid black;
-}
-.you_tube_spot {
-	border: 1px solid black;
-	transition: all ease 0.5s;
-    border-radius: 5px;
-    box-shadow: 0px 15px 0px teal;
-    margin-bottom: 15px;
-}
 .you_tube_spot:hover {
 	border: 1px solid white;
 }
@@ -172,8 +158,28 @@ label .videos {
 	box-shadow: 0 1px 0 teal;
     bottom:-14px;
 }
-
-
+#mid_right .you_tube_spot {
+	margin-left: 30%;
+}
+@media(min-width: 992px){
+.you_tube_spot {
+	height:100px; 
+	width:200px;
+	
+    border-radius: 25px;
+	border: 2px solid black;
+	border: 1px solid black;
+	transition: all ease 0.5s;
+    border-radius: 5px;
+    box-shadow: 0px 15px 0px teal;
+    margin-bottom: 15px;
+}
+}
+@media only screen and (max-width: 991px){
+  .you_tube_spot {
+    margin-left: 20%;
+  }
+}
 
 
 

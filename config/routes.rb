@@ -6,13 +6,9 @@ Rails.application.routes.draw do
 
   get 'content/right_arrow'
 
-  get 'content/works'
-
   get 'content/featured_works'
 
   get 'content/contact_us'
-
-  get 'home/index'
 
   post 'content/send_email'
 

@@ -32,4 +32,4 @@ SitemapGenerator::Sitemap.create do
   #   end
 end
 
-# SitemapGenerator::Sitemap.ping_search_engines('http://audiowithdrawal.com/sitemap.xml.gz')
+SitemapGenerator::Sitemap.ping_search_engines('http://www.audiowithdrawal.com/sitemap.xml.gz')

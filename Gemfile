@@ -12,7 +12,7 @@ gem 'devise'
 gem 'rest-client'
 gem 'mailgun-ruby'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'sqlite3'
 gem 'metamagic'
 gem "haml-rails", "~> 0.9"
 gem 'sitemap_generator'

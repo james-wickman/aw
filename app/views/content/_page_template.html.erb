@@ -24,7 +24,7 @@
 		<div class=" col-sm-2 hidden-md hidden-lg hidden-xl col-xs-2">
 			<%= form_for @video, :url => content_left_arrow_path,:format => :js, method: :get, remote: :true do |f| -%>
 				<%= f.hidden_field :name, value: name %>
-				<%= button_tag( :class => "side_arrow left") do %>
+				<%= button_tag( :class => "side_arrow left", :rel => 'follow') do %>
 					<svg width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'><polyline fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' points='45.63,75.8 0.375,38.087 45.63,0.375 '/><polyline fill='none' stroke='#FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' points='45.63,75.8 0.375,38.087 45.63,0.375 '/></svg>
 				<% end %>
 			<% end %>
@@ -37,7 +37,7 @@
 		<div class=" col-sm-2 hidden-md hidden-lg hidden-xl col-xs-2">
 			<%= form_for @video, :url => content_right_arrow_path,:format => :js, method: :get, remote: :true do |f| -%>
 				<%= f.hidden_field :name, value: name %>
-				<%= button_tag( :class => "side_arrow right") do %>
+				<%= button_tag( :class => "side_arrow right", :rel => 'follow') do %>
 					<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'><polyline fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8 '/><polyline fill='none' stroke='#FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8 '/></svg>
 				<% end %>
 			<% end %>
@@ -50,7 +50,7 @@
 	</div>
 	<div class="row home_section" style="height: 305px;">
 		<div class="col-md-1 hidden-xs hidden-sm">
-			<%= form_for @video, :url => content_left_arrow_path,:format => :js, method: :get, remote: :true do |f| -%>
+			<%= form_for @video, :url => content_left_arrow_path,:format => :js, method: :get, remote: :true, :rel => 'follow' do |f| -%>
 				<%= f.hidden_field :name, value: name %>
 				<%= button_tag( :class => "side_arrow left") do %>
 					<svg width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'><polyline fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' points='45.63,75.8 0.375,38.087 45.63,0.375 '/><polyline fill='none' stroke='#FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' points='45.63,75.8 0.375,38.087 45.63,0.375 '/></svg>
@@ -72,7 +72,7 @@
 			<% end %>
 		</div>
 		<div class="col-md-1 hidden-xs hidden-sm">
-			<%= form_for @video, :url => content_right_arrow_path,:format => :js, method: :get, remote: :true do |f| -%>
+			<%= form_for @video, :url => content_right_arrow_path,:format => :js, method: :get, remote: :true, :rel => 'follow' do |f| -%>
 				<%= f.hidden_field :name, value: name %>
 				<%= button_tag( :class => "side_arrow right") do %>
 					<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'><polyline fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8 '/><polyline fill='none' stroke='#FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8 '/></svg>

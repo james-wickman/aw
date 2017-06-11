@@ -12,7 +12,7 @@ gem 'devise'
 gem 'rest-client'
 gem 'mailgun-ruby'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'sqlite3'
 gem 'metamagic'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

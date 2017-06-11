@@ -7,7 +7,6 @@
                           PATCH  /videos/:id(.:format)             videos#update
                           PUT    /videos/:id(.:format)             videos#update
                           DELETE /videos/:id(.:format)             videos#destroy
-                          GET    /robots.:format                   home#robots
        content_left_arrow GET    /content/left_arrow(.:format)     content#left_arrow
       content_right_arrow GET    /content/right_arrow(.:format)    content#right_arrow
             content_works GET    /content/works(.:format)          content#works

@@ -2,6 +2,6 @@
 #
 # To ban all spiders from the entire site uncomment the next two lines:
 User-agent: *
-Disallow: /admins/
+Disallow: /admins/sign_in
 Sitemap: http://www.audiowithdrawal.com/sitemap.xml.gz
 

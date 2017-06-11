@@ -8,7 +8,7 @@
 # set :output, "/path/to/my/cron_log.log"
 set :chronic_options, :hours24 => true
 
-every 1.day, :at => '5:00' do
+every :sunday, :at => '5:00' do
   rake "-s sitemap:refresh"
 end
 

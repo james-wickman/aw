@@ -14,6 +14,9 @@ gem 'mailgun-ruby'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'metamagic'
+gem "haml-rails", "~> 0.9"
+gem 'sitemap_generator'
+gem 'whenever', :require => false
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

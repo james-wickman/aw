@@ -5,7 +5,7 @@ meta title: "Audio Withdrawal",
      robots: "index",
      keywords: %w(Luke Wickman, Audio Withdrawal, composer, compositions, music, scoring, sound engineers, Weird Phishes, Wikr, aw)
 %>
-<div class="container-fluid" style="padding: 0px; width: 97.7%;">
+<div class="container-fluid" style="padding: 0px; width: 97.%;">
 	<div class="row home_section">
 		<div class="col-md-12 col-xs-12">
 			<%= image_tag "audiowithdrawal_full.jpg", :class => "home_main_pic" %>
@@ -23,20 +23,22 @@ meta title: "Audio Withdrawal",
 		<h4 class='center'>Need some powerful music to match your visual artistry? We offer scoring and compositional services at</h4><h4 class='center'> very fair rates.</h4>
 
 		<h3 style="margin-bottom: 30px;">For Booking, hiring, or any other inquisitions, visit our contact page!</h4>
-		<div class="col-md-2 col-xs-0">
+		<div class="col-md-2 col-xs-1">
 		</div>
 		<div class="col-md-2 col-xs-5">
 			<%= button_to("Sound Store", '//www.audiowithdrawal.bandcamp.com', {class: "intro_buttons"}) %>
 		</div>
-		<div class="col-md-2 col-xs-5">
+		<div class="col-md-2 col-xs-6">
 			<%= button_to("You Tube", '//www.youtube.com/channel/UCKH1iz7ic0OVXmktxeUL3AA', {class: "intro_buttons"}) %>
+		</div>
+		<div class="hidden-xl hidden-lg hidden-md col-sm-1 col-xs-1">
 		</div>
 		<div class="col-md-2 col-xs-5 ">
 			<%= button_to(content_featured_works_path, class: "intro_buttons", method: :get, :rel => 'follow') do %>
 				Music
 			<% end %>
 		</div>
-		<div class="col-md-2 col-xs-5">
+		<div class="col-md-2 col-xs-6">
 			<%= button_to(content_contact_us_path, class: "intro_buttons", method: :get, :rel => 'follow') do %>
 				Contact Us
 			<% end %>

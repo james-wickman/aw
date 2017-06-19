@@ -101,13 +101,18 @@ $(document).on('turbolinks:load', function () {
      isClosed = true;
     function hamburger_cross() {
       if (isClosed == false) {
-        $('.logo_image').addClass('float_right');
+        $('.logo_image').animate({
+          marginRight: "18px"
+          
+        }, 1000);
         overlay.hide();
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
         isClosed = true;
       } else {
-        $('.logo_image').removeClass('float_right');
+        $('.logo_image').animate({
+          marginRight: "120px"
+        }, 1000)
         overlay.show();
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');

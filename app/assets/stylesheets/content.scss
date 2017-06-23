@@ -90,7 +90,7 @@ path {
   cursor: pointer;
   position: absolute;
   top: 100%;
-  margin-top: 10px;
+  margin-top: 100px;
   margin-left: 0px;
   width: 70px;
   height: 90px;
@@ -163,13 +163,42 @@ label .videos {
 }
 @media(min-width: 992px){
 
+	#mid_right {
+		width: 18%;
+		padding: 0px;
+		.you_tube_spot {
+			margin-left: 30%;
+			margin-top: 20px;
+			padding: 0px;
+		}
+	}
+	.mid_mid {
+		width: 45%;
+		padding: 0px;
+		position: relative;
+
+	}
+	#mid_left {
+		width: 20%;
+		padding: 0px;
+		.you_tube_spot {
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+	#top_middle .you_tube_spot {
+		margin: auto;
+	}
 	#mid_right .you_tube_spot {
-		margin-left: 30%;
+		margin-left: 2%;
+		width: 100%;
+	}
+	#bottom_mid .you_tube_spot {
+		margin-top: 40px;
 	}
 	.you_tube_spot {
-		height:100px; 
-		width:200px;
-		
+		height:100%; 
+		width: 100%;
 	    border-radius: 25px;
 		border: 2px solid black;
 		border: 1px solid black;
@@ -181,13 +210,16 @@ label .videos {
 }
 @media only screen and (max-width: 991px){
 
-	#mid_right .you_tube_spot {
-		margin-left: 20%;
+	#mid_right {
+		width: 10%;
+		.you_tube_spot {
+			margin-left: 20%;
+		}
 	}
 	.you_tube_spot {
 		margin-left: 20%;
-		height:200px; 
-		width:300px;
+		height:20%; 
+		width:30%;
 		
 	    border-radius: 25px;
 		border: 2px solid black;
@@ -198,6 +230,13 @@ label .videos {
 	    margin-bottom: 15px;
 	}
 }
+
+.loading_gif {
+	margin-left: 40%;
+	margin-top: 30%;
+}
+
+
 
 
 

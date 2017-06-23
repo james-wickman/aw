@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+html, body{
+    min-height: 100%;
+}
+
+
 @font-face{
   font-family:"Beyno";
   src:url(asset-path('fonts/BEYNO.ttf'));

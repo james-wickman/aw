@@ -1,7 +1,7 @@
 
 <% type = instance_variable_get(("@" + name).intern) %>
 <% i = @i %>
-<div class="row home_section hidden-sm hidden-xs" style="height: 120px; overflow:hidden;">
+<div class="row home_section" style="height: 120px; overflow:hidden; text-align: center;">
 	<div class="col-md-12 hidden-sm hidden-xs">
 		<%= image_tag name + ".png", :size=> '1100x450' %>
 	</div>
@@ -16,40 +16,26 @@
 <div class="row home_section hidden-sm hidden-xs" style="min-height: 100px;">
 	<div class="col-md-1 hidden-sm hidden-xs">
 	</div>
-	<div class="col-md-3 col-xs-11" id="top_left">
+	<div class="col-md-3 col-xs-11" id="top_left" style="margin-left: 3%; margin-top: 2%;">
 		<% if type[0] %>
 			<%= works_imgs(name, type[0][:key]) %>
 		<% end %>
 	</div>
-	<div class=" col-sm-2 hidden-md hidden-lg hidden-xl col-xs-2">
-		<%= form_for @video, :url => content_left_arrow_path,:format => :js, method: :get, remote: :true do |f| -%>
-			<%= f.hidden_field :name, value: name %>
-			<%= button_tag( :class => "side_arrow left", :rel => 'follow') do %>
-				<svg width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'><polyline fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' points='45.63,75.8 0.375,38.087 45.63,0.375 '/><polyline fill='none' stroke='#FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' points='45.63,75.8 0.375,38.087 45.63,0.375 '/></svg>
-			<% end %>
-		<% end %>
-	</div>
-	<div class="col-md-4 col-xs-7 col-sm-7" id="top_middle" style="margin-left: 20px;">
+	
+	<div class="col-md-3 col-xs-7 col-sm-7" id="top_middle" style="margin-left: 2%; margin-right: 1%;">
 		<% if type[1] %>
 			<%= works_imgs(name, type[1][:key]) %>
 		<% end %>
 	</div>
-	<div class=" col-sm-2 hidden-md hidden-lg hidden-xl col-xs-2">
-		<%= form_for @video, :url => content_right_arrow_path,:format => :js, method: :get, remote: :true do |f| -%>
-			<%= f.hidden_field :name, value: name %>
-			<%= button_tag( :class => "side_arrow right", :rel => 'follow') do %>
-				<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'><polyline fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8 '/><polyline fill='none' stroke='#FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8 '/></svg>
-			<% end %>
-		<% end %>
-	</div>
-	<div class="col-md-3 col-xs-12" id="top_right">
+	
+	<div class="col-md-3 col-xs-12" id="top_right" style="margin-top: 2%;">
 		<% if type[2] %>
 			<%= works_imgs(name, type[2][:key]) %>
 		<% end %>
 	</div>
 </div>
-<div class="row home_section hidden-sm hidden-xs" style="height: 305px;">
-	<div class="col-md-1 hidden-xs hidden-sm">
+<div class="row home_section" style="min-height: 250px; height: 100%;">
+	<div class="col-md-1">
 		<%= form_for @video, :url => content_left_arrow_path,:format => :js, method: :get, remote: :true, :rel => 'follow' do |f| -%>
 			<%= f.hidden_field :name, value: name %>
 			<%= button_tag( :class => "side_arrow left") do %>
@@ -57,21 +43,24 @@
 			<% end %>
 		<% end %>
 	</div>
-	<div class="col-md-2  col-xs-7 col-sm-7" id="mid_left" style="margin-top: 100px;">
+	<div class="col-md-3  col-xs-7 col-sm-7 hidden-sm hidden-xs" id="mid_left" style="margin-top: 5%; min-height: 150px;">
 		<% if type[3] %>
 			<%= works_imgs(name, type[3][:key]) %>
 		<% end %>
 	</div>
-	<div class="col-md-5 col-sm-12 col-xs-12 mid_mid you_tube_section" style="height: 305px;">
-		<div class="page_page_mid">
+	<div class="col-md-4 col-sm-12 col-xs-12 mid_mid you_tube_section" style="min-height: 150px;">
+		<div class="loading_page_mid hide">
+			<img src='/assets/loading1.gif' class='loading_gif ' height='42' width='42'">
+		</div>
+		<div class="page_page_mid" style="display: none; min-height: 150px; height: 100%; width:100%; position: absolute;">
 		</div>
 	</div>
-	<div class="col-lg-3 col-md-3  col-xs-7 col-sm-7" id="mid_right" style="margin-top: 100px;">
+	<div class="col-lg-3 col-md-3 col-xs-7 hidden-sm hidden-xs" id="mid_right" style="margin-top: 5%; min-height: 150px;">
 		<% if type[4] %>
 			<%= works_imgs(name, type[4][:key]) %>
 		<% end %>
 	</div>
-	<div class="col-md-1 hidden-xs hidden-sm">
+	<div class="col-md-1 ">
 		<%= form_for @video, :url => content_right_arrow_path,:format => :js, method: :get, remote: :true, :rel => 'follow' do |f| -%>
 			<%= f.hidden_field :name, value: name %>
 			<%= button_tag( :class => "side_arrow right") do %>
@@ -80,15 +69,15 @@
 		<% end %>
 	</div>
 </div>
-<div class="row home_section hidden-sm hidden-xs" style="">
+<div class="row home_section hidden-sm hidden-xs" style="margin-top: 1%;">
 	<div class="col-md-1 hidden-sm hidden-xs">
 	</div>
-	<div class="col-md-3  col-xs-7 col-sm-7" id="bottom_left">
+	<div class="col-md-3  col-xs-7 col-sm-7" id="bottom_left" style="margin-left: 3%;">
 		<% if type[5] %>
 			<%= works_imgs(name, type[5][:key]) %>
 		<% end %>
 	</div>
-	<div class="col-md-4  col-xs-7 col-sm-7" id="bottom_mid" style="margin-left: 20px;">
+	<div class="col-md-3  col-xs-7 col-sm-7" id="bottom_mid" style="margin-left: 2%; margin-right: 1%;">
 		<% if type[6] %>
 			<%= works_imgs(name, type[6][:key]) %>
 		<% end %>
@@ -100,81 +89,69 @@
 	</div>
 </div>
 
-<div class="row home_section hidden-md hidden-lg hidden-xl" style="min-height: 50px; overflow:hidden;">
-</div>
-<div class="row home_section hidden-md hidden-lg hidden-xl" style="min-height: 360px; overflow:hidden;">
-	<div class=" col-sm-1 col-xs-1" style="margin-top: 250px;">
-		<%= form_for @video, :url => content_left_arrow_path,:format => :js, method: :get, remote: :true do |f| -%>
-			<%= f.hidden_field :name, value: name %>
-			<%= button_tag( :class => "side_arrow left", :rel => 'follow') do %>
-				<svg width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'><polyline fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' points='45.63,75.8 0.375,38.087 45.63,0.375 '/><polyline fill='none' stroke='#FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' points='45.63,75.8 0.375,38.087 45.63,0.375 '/></svg>
-			<% end %>
-		<% end %>
-	</div>
-	
-	<div class=" col-sm-9 col-xs-9 mid_mid you_tube_section" style="height: 305px;">
-		<div class="page_page_mid">
-		</div>
-	</div>
 
-	<div class=" col-sm-1 col-xs-1" style="margin-top: 250px;">
-		<%= form_for @video, :url => content_right_arrow_path,:format => :js, method: :get, remote: :true do |f| -%>
-			<%= f.hidden_field :name, value: name %>
-			<%= button_tag( :class => "side_arrow right", :rel => 'follow') do %>
-				<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='60px' height='80px' viewBox='0 0 50 80' xml:space='preserve'><polyline fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8 '/><polyline fill='none' stroke='#FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' points='0.375,0.375 45.63,38.087 0.375,75.8 '/></svg>
-			<% end %>
-		<% end %>
+<br>
+<div class="row home_section hidden-md hidden-lg hidden-xl" style="min-height: 120px; overflow:hidden; margin-top: 100px;">
+	<div class="col-sm-1 col-xs-1">
+		
 	</div>
-
-</div> <br>
-<div class="row home_section hidden-md hidden-lg hidden-xl" style="min-height: 120px; overflow:hidden;">
-	<div class="col-md-3 col-xs-6" id="top_left" style="width: 40%;">
+	<div class="col-md-3 col-xs-5" id="top_left" style="width: 40%;">
 		<% if type[0] %>
 			<%= works_imgs(name, type[0][:key]) %>
 		<% end %>
 	</div>
-	<div class="col-md-4 col-xs-6 col-sm-6" id="top_middle">
+	<div class="col-md-4 col-xs-5 col-sm-5" id="top_middle">
 		<% if type[1] %>
 			<%= works_imgs(name, type[1][:key]) %>
 		<% end %>
 	</div>
 </div> <br>
 <div class="row home_section hidden-md hidden-lg hidden-xl" style="min-height: 120px; overflow:hidden;">
-	<div class="col-md-3 col-xs-6" id="top_right" style="width: 40%;">
+	<div class="col-sm-1 col-xs-1">
+		
+	</div>
+	<div class="col-md-3 col-xs-5" id="top_right" style="width: 40%;">
 		<% if type[2] %>
 			<%= works_imgs(name, type[2][:key]) %>
 		<% end %>
 	</div>
-	<div class="col-md-2  col-xs-6 col-sm-6" id="mid_left"">
+	<div class="col-md-2  col-xs-5 col-sm-5" id="mid_left"">
 		<% if type[3] %>
 			<%= works_imgs(name, type[3][:key]) %>
 		<% end %>
 	</div>
 </div> <br>
 <div class="row home_section hidden-md hidden-lg hidden-xl" style="min-height: 120px; overflow:hidden;">
-	<div class="col-lg-3 col-md-3  col-xs-6 col-sm-6" id="mid_right"  style="width: 40%; margin-left: 0px;">
+	<div class="col-sm-1 col-xs-1">
+		
+	</div>
+	<div class="col-lg-3 col-md-3  col-xs-5 col-sm-5" id="mid_right"  style="width: 40%; margin-left: 0px;">
 		<% if type[4] %>
 			<%= works_imgs(name, type[4][:key]) %>
 		<% end %>
 	</div>
-	<div class="col-md-3  col-xs-6 col-sm-6" id="bottom_left">
+	<div class="col-md-3  col-xs-5 col-sm-5" id="bottom_left">
 		<% if type[5] %>
 			<%= works_imgs(name, type[5][:key]) %>
 		<% end %>
 	</div>
 </div> <br>
 <div class="row home_section hidden-md hidden-lg hidden-xl" style="min-height: 120px; overflow:hidden;">
-	<div class="col-md-4  col-xs-6 col-sm-6" id="bottom_mid" style="width: 40%;">
+	<div class="col-sm-1 col-xs-1">
+		
+	</div>
+	<div class="col-md-4  col-xs-5 col-sm-5" id="bottom_mid" style="width: 40%;">
 		<% if type[6] %>
 			<%= works_imgs(name, type[6][:key]) %>
 		<% end %>
 	</div>
-	<div class="  col-xs-6 col-sm-6" id="bottom_right">
+	<div class="  col-xs-5 col-sm-5" id="bottom_right">
 		<% if type[7] %>
 			<%= works_imgs(name, type[7][:key]) %>
 		<% end %>
 	</div>
 </div>
+
 
 
 

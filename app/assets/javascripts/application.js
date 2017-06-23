@@ -23,17 +23,11 @@ $(document).on('turbolinks:load', function () {
           'slow');
   });
   $(document).on('click', ".you_tube_spot", function() {
-    if(screen.width >= 992) {
 
-      $('html,body').animate({
-          scrollTop: $(".you_tube_section").offset().top -40},
-          'slow');
-    }
-    else {
-       $('html,body').animate({
-          scrollTop: $("body").offset().top -40},
-          'slow');
-    }
+    $('.loading_page_mid').removeClass("hide");
+    $('html,body').animate({
+      scrollTop: $(".you_tube_section").offset().top -40},
+      'slow');
   });
   $(document).on("click", ".submit_email", function() {
     var name = $('.customer_name').val();
@@ -53,19 +47,17 @@ $(document).on('turbolinks:load', function () {
     var page = $(this).attr('data-page');
     $(this).removeClass('pop_out');
     $(this).addClass('pressed_in');
-    $(".page_page_mid ").html("<iframe width='500' height='300' src='https://www.youtube.com/embed/" + data + "'style='margin: auto;' frameborder='0' allowfullscreen></iframe>").hide();
+    $(".page_page_mid ").html("<iframe id='myIframe' style='position: relative; height: 300px; width: 100%;' src='https://www.youtube.com/embed/" + data + "'style='margin: auto;' frameborder='0' allowfullscreen></iframe>").hide();
     var iframeSrc = $(this).attr('href');
-    $('.page_page_mid').fadeOut(10,function(){
-      $('.page_page_mid' + ' iframe').attr('src',iframeSrc);
-      $('.page_page_mid').fadeIn(1800);
-    });
-    $(".page_page_mid").eq(1).html("<iframe width='680' height='400' src='https://www.youtube.com/embed/" + data + "'style='margin: auto;' frameborder='0' allowfullscreen></iframe>").hide();
-    var iframeSrc = $(this).attr('href');
-    $('.page_page_mid').eq(1).fadeOut(10,function(){
-      $('.page_page_mid' + ' iframe').eq(1).attr('src',iframeSrc);
-      $('.page_page_mid').eq(1).fadeIn(1800);
-    });
+    $('#myIframe').load(function(){
+      $('.loading_page_mid').addClass("hide");
+      $('.page_page_mid').fadeOut(10,function(){
+        $('.page_page_mid' + ' iframe').attr('src',iframeSrc);
+        $('.page_page_mid').fadeIn(1800);
+      });
+    })
   })
+  
   $(window).on('scroll', function() {
   	var scrollPos = $(window).scrollTop();
   	if (scrollPos > 100) {

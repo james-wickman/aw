@@ -33,6 +33,17 @@ body {
 .social_media_buttons {
   padding: 0px;
 }
+
+.embedded_div, iframe {
+  margin: 0 auto;
+}
+.soundcloud_widget_holder {
+  background-color: white;
+  width: 500px;
+  height: 450px;
+  margin: 0 auto;
+}
+
 .intro_buttons {
   width: 200px;
   background-color: white;

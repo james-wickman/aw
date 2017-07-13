@@ -20,9 +20,8 @@ $(document).on('turbolinks:load', function () {
   var soundcloud_list = {genre_based_thematic_samples: '335414613', emotional: '329904726', action_intense: '329904489', horror_mysterious: '329904155', uplifting: '329904403', video_game_based: '336466351'};
   $(document).on('click', ".soundcloud_buttons", function() {
     current_playlist = $(this).attr('id');
-    $('.embedded_widget').html("<div class='col-md-2 col-xs-2'></div><div class='col-md-5 col-xs-5'><iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/" + soundcloud_list[current_playlist] + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe></div>");
-    console.log(current_playlist);
-    console.log(soundcloud_list);
+    $('.embedded_widget').html("<div class='col-md-12 col-xs-12 embedded_div'><iframe width='500' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/" + soundcloud_list[current_playlist] + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe></div>");
+
   })
   $(document).on('click', ".arrow" , function() {
       $('html,body').animate({

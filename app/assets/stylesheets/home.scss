@@ -51,6 +51,26 @@ body {
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   }
 }
+.soundcloud_buttons {
+  width: 300px;
+  background-color: white;
+  color: blue;
+  border: 2px solid black;
+  box-shadow: 6px 6px 6px black;
+  transition: padding-top 0.5s ease;
+  transition: background-color 2s ease;
+  margin: auto;
+  padding-bottom: 5px;
+
+  &:hover {
+    padding-bottom: 0px;
+    padding-top: 5px;
+    font-family: "Beyno";
+    background-color: #46c9f7;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
+}
 .arrow {
   position: fixed;
   bottom: 50px;

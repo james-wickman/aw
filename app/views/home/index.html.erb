@@ -44,6 +44,36 @@ meta title: "Audio Withdrawal",
 			<% end %>
 		</div>
 	</div>
+
+	<div class="row center soundcloud_section">
+		<div class="col-md-6 col-xs-6">
+			<button class="soundcloud_buttons genre_based_thematic_samples" id="genre_based_thematic_samples">Genre Based Thematic Samples</button>
+		</div>
+		<div class="col-md-6 col-xs-6">
+			<button class="soundcloud_buttons video_game" id="video_game_based">Video Game Based</button>
+		</div>
+	</div>
+	<div class="row center soundcloud_section">
+		<div class="col-md-6 col-xs-6">
+			<button class="soundcloud_buttons action" id="action_intense">Action/Intense</button>
+		</div>
+		<div class="col-md-6 col-xs-6">
+			<button class="soundcloud_buttons emotional" id="emotional">Emotional</button>
+		</div>
+	</div>
+	<div class="row center soundcloud_section">
+		<div class="col-md-6 col-xs-6">
+			<button class="soundcloud_buttons uplifting" id="uplifting">Uplifting</button>
+		</div>
+		<div class="col-md-6 col-xs-6">
+			<button class="soundcloud_buttons horror" id="horror_mysterious">Horror/Mysterious</button>
+		</div>
+	</div>
+		
+	<div class="row center soundcloud_section embedded_widget" style="min-height:300px;">
+
+	</div>
+
 	<div class="row center featured_works_section" style="height:100%; background-color: lightgrey;">
 
 		<div class="col-md-12 col-xs-12 scoring_samples" style="height: 50px;">
@@ -58,7 +88,7 @@ meta title: "Audio Withdrawal",
 			<h3>FEATURED WORKS</h3>
 		</div>
 		<% @featured_works.each do |featured| %>
-			<div class="col-md-6 col-xs-12" id="mid_left">
+			<div class="col-md-6 col-xs-12" id="top_left">
 				<iframe width='540' height='250' src='https://www.youtube.com/embed/<%= featured[:key] %>'style='margin: auto;' frameborder='0' allowfullscreen></iframe>
 			</div>
 		<% end %>

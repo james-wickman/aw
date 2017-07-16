@@ -21,7 +21,8 @@ $(document).on('turbolinks:load', function () {
   $(document).on('click', ".soundcloud_buttons", function() {
     current_playlist = $(this).attr('id');
     $('.embedded_widget').html("<div class='col-md-12 col-xs-12 embedded_div'><iframe width='500' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/" + soundcloud_list[current_playlist] + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe></div>");
-
+    $('.soundcloud_buttons').removeClass('clicked_soundcloud_buttons');
+    $(this).addClass('clicked_soundcloud_buttons');
   })
   $(document).on('click', ".arrow" , function() {
       $('html,body').animate({
@@ -81,7 +82,7 @@ $(document).on('turbolinks:load', function () {
   $(".intro_button").on('click', function() {
       $('html,body').animate({
           scrollTop: $(".intro_section").offset().top},
-          'slow');
+          'fast');
   });
   $(".featured_works_button").on('click', function() {
       $('html,body').animate({

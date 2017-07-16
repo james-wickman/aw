@@ -20,7 +20,8 @@ $(document).on('turbolinks:load', function () {
   var soundcloud_list = {genre_based_thematic_samples: '335414613', emotional: '329904726', action_intense: '329904489', horror_mysterious: '329904155', uplifting: '329904403', video_game_based: '336466351'};
   $(document).on('click', ".soundcloud_buttons", function() {
     current_playlist = $(this).attr('id');
-    $('.embedded_widget').html("<div class='col-md-12 col-xs-12 embedded_div'><iframe width='500' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/" + soundcloud_list[current_playlist] + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe></div>");
+    $('.loading_sound_cloud_mid').removeClass('hide');
+    $('.soundcloud_widget_holder').html("<iframe id='soundcloud_iframe' width='500' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/" + soundcloud_list[current_playlist] + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>");
     $('.soundcloud_buttons').removeClass('clicked_soundcloud_buttons');
     $(this).addClass('clicked_soundcloud_buttons');
   })
@@ -31,7 +32,6 @@ $(document).on('turbolinks:load', function () {
   });
   $(document).on('click', ".you_tube_spot", function() {
 
-    $('.loading_page_mid').removeClass("hide");
     $('html,body').animate({
       scrollTop: $(".you_tube_section").offset().top -40},
       'slow');
@@ -54,15 +54,8 @@ $(document).on('turbolinks:load', function () {
     var page = $(this).attr('data-page');
     $(this).removeClass('pop_out');
     $(this).addClass('pressed_in');
-    $(".page_page_mid ").html("<iframe id='myIframe' style='position: relative; height: 300px; width: 100%;' src='https://www.youtube.com/embed/" + data + "'style='margin: auto;' frameborder='0' allowfullscreen></iframe>").hide();
+    $(".page_page_mid ").html("<iframe id='myIframe' style='position: relative; height: 300px; width: 100%;' src='https://www.youtube.com/embed/" + data + "'style='margin: auto;' frameborder='0' allowfullscreen></iframe>");
     var iframeSrc = $(this).attr('href');
-    $('#myIframe').load(function(){
-      $('.loading_page_mid').addClass("hide");
-      $('.page_page_mid').fadeOut(10,function(){
-        $('.page_page_mid' + ' iframe').attr('src',iframeSrc);
-        $('.page_page_mid').fadeIn(1800);
-      });
-    })
   })
   
   $(window).on('scroll', function() {

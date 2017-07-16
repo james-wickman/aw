@@ -9,6 +9,9 @@ $img_box_shadow: teal;
   font-family:"Beyno";
   src:url(asset-path('fonts/BEYNO.ttf'));
 }
+#myIframe {
+	background: image-url("loading_gif.gif") center center no-repeat;	
+}
 .holding_class {
 	color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;

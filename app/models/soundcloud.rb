@@ -1,0 +1,2 @@
+class Soundcloud < ApplicationRecord
+end

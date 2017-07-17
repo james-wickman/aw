@@ -1,4 +1,4 @@
-<div class="container-fluid lukes_compositions_block admin_index_blocks" style="padding: 0px; width: 100%;">
+<div class="container-fluid lukes_compositions_block admin_index_blocks" style="padding: 0px; width: 100%; background-color: lightblue;">
 	<div class="row home_section">
 		<div class="col-md-8 col-push-md-7 col-xs-8">
 		</div>
@@ -6,6 +6,7 @@
 			<button class="videos admin_weird_phishes">Weird Phishes</button>
 			<button class="videos admin_wikr">Wikr</button>
 			<button class="videos admin_featured_works">Featured Works</button>
+			<button class="videos admin_soundcloud">Sound Cloud</button>
 			<button class="videos admin_scoring_samples">Scoring Samples</button>  <hr>
 			<% p @lukes_compositions.length %>
 			<% if @lukes_compositions.length < 8 %>
@@ -42,7 +43,7 @@
 	<% end %>
 </div>
 
-<div class="container-fluid weird_phishes_block admin_index_blocks hidden" style="padding: 0px; width: 100%;">
+<div class="container-fluid weird_phishes_block admin_index_blocks hidden" style="padding: 0px; width: 100%; background-color: lightblue;">
 	<div class="row home_section">
 		<div class="col-md-8 col-push-md-7 col-xs-8">
 		</div>
@@ -50,6 +51,7 @@
 			<button class="videos admin_lukes_compositions">Lukes Compositions </button>
 			<button class="videos admin_wikr">Wikr</button>
 			<button class="videos admin_featured_works">Featured Works</button>
+			<button class="videos admin_soundcloud">Sound Cloud</button>
 			<button class="videos admin_scoring_samples">Scoring Samples</button>  <hr>
 			<% p @lukes_compositions.length %>
 			<% if @weird_phishes.length < 8 %>
@@ -86,7 +88,7 @@
 	<% end %>
 </div>
 
-<div class="container-fluid wikr_block admin_index_blocks hidden" style="padding: 0px; width: 100%;">
+<div class="container-fluid wikr_block admin_index_blocks hidden" style="padding: 0px; width: 100%; background-color: lightblue;">
 	<div class="row home_section">
 		<div class="col-md-8 col-push-md-7 col-xs-8">
 		</div>
@@ -94,6 +96,7 @@
 			<button class="videos admin_weird_phishes">Weird Phishes</button>
 			<button class="videos admin_lukes_compositions">Lukes Compositions</button>
 			<button class="videos admin_featured_works">Featured Works</button>
+			<button class="videos admin_soundcloud">Sound Cloud</button>
 			<button class="videos admin_scoring_samples">Scoring Samples</button> <hr>
 			<% p @lukes_compositions.length %>
 			<% if @wikr.length < 8 %>
@@ -130,7 +133,7 @@
 	<% end %>
 </div>
 
-<div class="container-fluid scoring_samples_block admin_index_blocks hidden" style="padding: 0px; width: 100%;">
+<div class="container-fluid scoring_samples_block admin_index_blocks hidden" style="padding: 0px; width: 100%; background-color: lightblue;">
 	<div class="row home_section">
 		<div class="col-md-8 col-push-md-7 col-xs-8">
 		</div>
@@ -138,6 +141,7 @@
 			<button class="videos admin_weird_phishes">Weird Phishes</button>
 			<button class="videos admin_wikr">Wikr</button>
 			<button class="videos admin_lukes_compositions">Lukes Compositions</button>
+			<button class="videos admin_soundcloud">Sound Cloud</button>
 			<button class="videos admin_featured_works">Featured Works</button> <hr>
 			<% p @scoring_samples.length %>
 			<% if @scoring_samples.length < 2 %>
@@ -174,7 +178,7 @@
 	<% end %>
 </div>
 
-<div class="container-fluid featured_works_block admin_index_blocks hidden" style="padding: 0px; width: 100%;">
+<div class="container-fluid featured_works_block admin_index_blocks hidden" style="padding: 0px; width: 100%; background-color: lightblue;">
 	<div class="row home_section">
 		<div class="col-md-8 col-push-md-7 col-xs-8">
 		</div>
@@ -182,6 +186,7 @@
 			<button class="videos admin_weird_phishes">Weird Phishes</button>
 			<button class="videos admin_wikr">Wikr</button>
 			<button class="videos admin_scoring_samples">Scoring Samples</button>
+			<button class="videos admin_soundcloud">Sound Cloud</button>
 			<button class="videos admin_lukes_compositions">Lukes Compositions</button> <hr>
 			<% p @featured_works.length %>
 			<% if @featured_works.length < 2 %>
@@ -216,6 +221,51 @@
 			</div>
 		</div>
 	<% end %>
+	<% @soundcloud_playlists.each do |playlist| %>
+
+
+	<% end %>
+</div>
+<div class="container-fluid soundcloud_block admin_index_blocks hidden" style="padding: 0px; width: 100%; background-color: lightblue;">
+	<div class="row home_section">
+		<div class="col-md-8 col-push-md-7 col-xs-8">
+		</div>
+		<div class="col-md-3 col-push-md-7 col-xs-3">
+			<button class="videos admin_weird_phishes">Weird Phishes</button>
+			<button class="videos admin_wikr">Wikr</button>
+			<button class="videos admin_lukes_compositions">Lukes Compositions</button>
+			<button class="videos admin_soundcloud">Sound Cloud</button>
+			<button class="videos admin_featured_works">Featured Works</button> <hr>
+			<% p @soundcloud_playlists.length %>
+			<% if @soundcloud_playlists.length < 6 %>
+
+				<%= form_for @video, :url => new_soundcloud_path, method: :get do |f| -%>
+					<%= f.hidden_field :section, value: "soundcloud_playlists" %>
+					<%= f.submit "Add New", class: "submit_button" %>
+				<% end -%>
+			<% else %>
+				<h3>You have too many videos on this section, ether delete or edit one before you can add anouther.</h3>
+			<% end %>
+		</div>
+	</div>
+	<div class="row home_section">
+		<div class="col-md-4 col-xs-4">
+		</div>
+		<div class="col-md-6 col-xs-6">
+			<h1>Sound Cloud</h1>
+		</div>
+	</div>
+	<% @soundcloud_playlists.each do |playlist| %>
+		<div class="row home_section">
+			<div class="col-md-12 col-xs-12 center videos">
+				<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<%=playlist.reference_number%>&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+				<h4> <%= playlist.button_name  %> </h4>
+				<h4> <%= playlist.reference_number  %> </h4>
+				<%= button_to "Edit", "/soundcloud/#{playlist.id}/edit", method: :get %>
+				<%= button_to "Delete", "/soundcloud/#{playlist.id}", method: :delete %> <hr>
+			</div>
+		</div>
+	<% end %>
 </div>
 
 <script>
@@ -238,6 +288,18 @@
 	$('.admin_featured_works').on('click', function() {
 		$('.admin_index_blocks').addClass('hidden');
 		$('.featured_works_block').removeClass('hidden');
+	})
+	$('.admin_soundcloud').on('click', function(){
+		$('.admin_index_blocks').addClass('hidden');
+		$('.soundcloud_block').removeClass('hidden');
+	})
+	var soundcloud_list = {genre_based_thematic_samples: '335414613', emotional: '329904726', action_intense: '329904489', horror_mysterious: '329904155', uplifting: '329904403', video_game_based: '336466351'};
+	$(document).on('click', ".soundcloud_buttons", function() {
+		current_playlist = $(this).attr('id');
+		$('.loading_sound_cloud_mid').removeClass('hide');
+		$('.soundcloud_widget_holder').html("<iframe id='soundcloud_iframe' width='500' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/" + soundcloud_list[current_playlist] + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>");
+		$('.soundcloud_buttons').removeClass('clicked_soundcloud_buttons');
+		$(this).addClass('clicked_soundcloud_buttons');
 	})
 </script>
 

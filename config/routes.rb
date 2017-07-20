@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  
   resources :videos
+
+  resources :soundcloud
 
   get 'content/left_arrow'
 

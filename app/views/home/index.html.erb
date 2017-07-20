@@ -3,7 +3,7 @@
 meta title: "Audio Withdrawal",
      description: "Audio Compositions",
      robots: "index",
-     keywords: %w(Luke Wickman, Audio Withdrawal, composer, compositions, music, scoring, sound engineers, Weird Phishes, Wikr, aw)
+     keywords: %w(Luke Wickman, Audio Withdrawal, audio, composer, compositions, music, scoring, sound engineers, Weird Phishes, Wikr, aw)
 %>
 <div class="container-fluid" style="padding: 0px; width: 97.7%;">
 	<div class="row home_section">
@@ -44,41 +44,7 @@ meta title: "Audio Withdrawal",
 			<% end %>
 		</div>
 	</div>
-	<div class="row center soundcloud_header">
-		<div class="col-md-12 col-xs-12 scoring_samples" style="height: 50px; color: white;">
-			<h3>MUSIC SAMPLES</h3>
-		</div>
-	</div>
-	<div class="row center soundcloud_section">
-		<div class="col-md-6 col-xs-6">
-			<button class="soundcloud_buttons genre_based_thematic_samples" id="genre_based_thematic_samples">Genre Based Thematic Samples</button>
-		</div>
-		<div class="col-md-6 col-xs-6">
-			<button class="soundcloud_buttons video_game" id="video_game_based">Video Game Based</button>
-		</div>
-	</div>
-	<div class="row center soundcloud_section">
-		<div class="col-md-6 col-xs-6">
-			<button class="soundcloud_buttons action" id="action_intense">Action/Intense</button>
-		</div>
-		<div class="col-md-6 col-xs-6">
-			<button class="soundcloud_buttons emotional" id="emotional">Emotional</button>
-		</div>
-	</div>
-	<div class="row center soundcloud_section">
-		<div class="col-md-6 col-xs-6">
-			<button class="soundcloud_buttons uplifting" id="uplifting">Uplifting</button>
-		</div>
-		<div class="col-md-6 col-xs-6">
-			<button class="soundcloud_buttons horror" id="horror_mysterious">Horror/Mysterious</button>
-		</div>
-	</div>
-		
-	<div class="row center soundcloud_section embedded_widget" style="min-height:460px;">
-		<div class="soundcloud_widget_holder">
-			<%= image_tag "soundcloud_logo.png", :class => "soundcloud_placeholder_img" %>
-		</div>
-	</div>
+	<%= render 'sound_cloud_section' %>
 
 	<div class="row center featured_works_section" style="height:100%; background-color: lightgrey;">
 

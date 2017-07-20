@@ -1,0 +1,40 @@
+
+
+
+
+<div class="row center soundcloud_header">
+	<div class="col-md-12 col-xs-12 scoring_samples" style="height: 50px; color: white;">
+		<h3>MUSIC SAMPLES</h3>
+	</div>
+</div>
+
+<% @sound_cloud_playlists.each_with_index do |playlist, i| %>
+	
+	<% if i.even? %>
+		<div class="row center soundcloud_section">
+			<div class="col-md-6 col-xs-6">
+				<button class="soundcloud_buttons " id="<%=playlist.reference_number%>"><%= playlist.button_name %></button>
+			</div>
+	<% elsif i.even? == false %>
+			<div class="col-md-6 col-xs-6">
+				<button class="soundcloud_buttons " id="<%=playlist.reference_number %>"><%= playlist.button_name %></button>
+			</div>
+		</div>
+	<% end %>
+<% end %>
+
+<div class="row center soundcloud_section embedded_widget" style="min-height:460px;">
+	<div class="soundcloud_widget_holder">
+		<%= image_tag "soundcloud_logo.png", :class => "soundcloud_placeholder_img" %>
+	</div>
+</div>
+
+<script>
+	$(document).on('click', ".soundcloud_buttons", function() {
+	    current_playlist = $(this).attr('id');
+	    $('.loading_sound_cloud_mid').removeClass('hide');
+	    $('.soundcloud_widget_holder').html("<iframe id='soundcloud_iframe' width='500' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/" + $(this).attr('id') + "&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe>");
+	    $('.soundcloud_buttons').removeClass('clicked_soundcloud_buttons');
+	    $(this).addClass('clicked_soundcloud_buttons');
+	  })
+</script>

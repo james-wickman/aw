@@ -7,6 +7,14 @@
                           PATCH  /videos/:id(.:format)             videos#update
                           PUT    /videos/:id(.:format)             videos#update
                           DELETE /videos/:id(.:format)             videos#destroy
+         soundcloud_index GET    /soundcloud(.:format)             soundcloud#index
+                          POST   /soundcloud(.:format)             soundcloud#create
+           new_soundcloud GET    /soundcloud/new(.:format)         soundcloud#new
+          edit_soundcloud GET    /soundcloud/:id/edit(.:format)    soundcloud#edit
+               soundcloud GET    /soundcloud/:id(.:format)         soundcloud#show
+                          PATCH  /soundcloud/:id(.:format)         soundcloud#update
+                          PUT    /soundcloud/:id(.:format)         soundcloud#update
+                          DELETE /soundcloud/:id(.:format)         soundcloud#destroy
        content_left_arrow GET    /content/left_arrow(.:format)     content#left_arrow
       content_right_arrow GET    /content/right_arrow(.:format)    content#right_arrow
    content_featured_works GET    /content/featured_works(.:format) content#featured_works

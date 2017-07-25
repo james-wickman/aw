@@ -62,9 +62,9 @@ class ContentController < ApplicationController
       :subject => "#{subject}",
       :text => "#{message}"
       if status == 200
-        redirect_to root_path, :flash => {:notice => "Email successfully sent"}
+        render js: "window.location = '#{root_path}'"
       else
-        redirect_to root_path, :flash => {:alert => "Email was not sent correctly"}
+        render js: "window.location = '#{root_path}'"
       end
     end
   end

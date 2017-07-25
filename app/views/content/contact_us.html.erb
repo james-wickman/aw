@@ -13,7 +13,7 @@ meta title: "Contact Us",
 	</div>
 	<div class="row shading email_container" style="margin-top: 10px; margin-left: 50px;">
 
-		<%= form_tag'/content/send_email' do |f| %>
+		<%= form_tag('/content/send_email') do |f| %>
 			<%= hidden_field_tag :send_to_email, nil, class:"send_to_email" %><br />
 			<%= text_area_tag :first_name, nil, size: "20x1", class: "customer_name", placeholder: "First Name" %>
 			<%= text_area_tag :last_name, nil, size: "20x1", class: "customer_name", placeholder: "Last Name" %><br>

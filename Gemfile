@@ -13,7 +13,7 @@ gem 'rest-client'
 gem 'mailgun-ruby'
 gem 'restful_routing'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 gem 'metamagic'
 gem "haml-rails", "~> 0.9"
 gem 'sitemap_generator'

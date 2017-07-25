@@ -71,9 +71,6 @@
                 <% end %>
             </ul>
         </nav>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
         <div id="page-content-wrapper">
           <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
             <span class="hamb-top"></span>
@@ -82,29 +79,27 @@
           </button>
           
         </div>
-        <!-- /#page-content-wrapper
 
-    </div>
-    /#wrapper -->
-    <%= yield :javascript %>
-    <% if flash[:notice] || flash[:alert] %>
-	    <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-	  <% end %>
-    <%= yield %>
+        <%= yield :javascript %>
+
+
+        <% if flash[:notice] || flash[:alert] %>
+            <p class="notice" style="background-color: white, font-size: 150%;, text-align: center;" ><%= notice %></p>
+            <p class="alert" style="background-color: white, font-size: 150%;, text-align: center;" ><%= alert %></p>
+        <% end %>
+
+
+        <%= yield %>
+
+
         <footer class="page-footer blue center-on-small-only" style="width: 97.7%">
             <div class="container-fluid" style="padding: 0px; width: 100%;">
-        <!--Footer Links-->
             <div class="row">
                 <div class="col-md-1 col-xs-1">
                 </div>
-                <!--First column-->
                 <div class="col-md-5 col-xs-5">
                     <p>Any Questions please reach out</p>
                 </div>
-                <!--/.First column-->
-
-                <!--Second column-->
                 <div class="col-md-2 col-xs-2">
                     <h5 class="title">Links</h5>
                     <ul>
@@ -116,29 +111,18 @@
                             <li><%= link_to "Admin", videos_path, method: :get, class: 'white' %></li>
                             <li><%= link_to "Log Out", destroy_admin_session_path, method: :delete, class: 'white' %></li>
                         <% end %>
-                        <!-- <li><%= link_to raw(" login"), new_admin_session_path %></li>
-                        <li><%= link_to raw(" log out "), destroy_admin_session_path, method: :delete %></li> -->
                     </ul>
                 </div>
-                <!--/.Second column-->
             </div>
             <div class="row">
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-11">
-                    © 2017 Copyright
+                    © 2017 Copyright AudioWithdrawal
 
                 </div>
-                
             </div>
-        <!--/.Footer Links-->
-        <!--/.Copyright-->
-
         </footer>
-        
     </div>
-
-
-    
   </body>
 </html>

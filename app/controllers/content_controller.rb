@@ -44,6 +44,9 @@ class ContentController < ApplicationController
     end
   end
 
+  def reviews
+
+  end
 
   def send_email
     p params

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :soundcloud
 
+  get 'content/reviews'
+  
   get 'content/left_arrow'
 
   get 'content/right_arrow'
